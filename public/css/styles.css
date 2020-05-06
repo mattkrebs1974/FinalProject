@@ -1,0 +1,69 @@
+
+html {
+
+    background-color: black;
+    
+}
+
+.background {
+
+    background-color: black;
+    color:white;
+}
+
+
+.list-group-item {
+  line-height: 2.5;
+}
+
+#formBox {
+  width: 250px;
+  margin: auto;
+
+}
+#logo {
+  text-align: center;
+  width: 50%;
+  max-width: 425px;
+  height: auto;
+}
+button {
+
+    
+   background-color:#176cab;
+}
+#playerformsection {
+
+
+    padding-top:50px;
+    padding-bottom:100px;
+    padding-left: 80px;
+    padding-right: 40px;
+}
+
+
+.title {
+
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-variant: small-caps;
+color: #176cab;
+
+
+}
+.t {
+text-shadow: .5px .5px white;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-variant: small-caps;
+color: #176cab;
+}
+
+.e{
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-variant: small-caps;
+color: white;
+}
+
+.t:hover{
+text-shadow: 1.5px 1.5px white;
+
+}
