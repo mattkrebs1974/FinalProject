@@ -4,7 +4,7 @@ export default class Home extends Component {
     render() {
         return (
           <div>
-            <div className="title">Brain Guage</div>
+            <div className="title">Brain Gauge</div>
             <br></br>
             <br></br>
             <div className="d-flex justify-content-center">
