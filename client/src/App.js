@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./pages/login.page";
 import SignUp from "./pages/signup.page";
 import Home from "./pages/home.page";
+import GameOne from "./pages/Game.page"
 
 function App() {
   return (
@@ -53,6 +54,7 @@ function App() {
               <Route exact path="/" component={Home} />
               <Route path="/sign-in" component={Login} />
               <Route path="/sign-up" component={SignUp} />
+              <Route path="/Game" component={GameOne} />
             </Switch>
           </div>
         </div>

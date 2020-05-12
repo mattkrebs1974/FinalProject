@@ -22,6 +22,8 @@ export default class Home extends Component {
             </div>
             <div className="enter forgot-password text-right">
               <a href="/sign-in">Enter Here</a>
+              <br/>
+              <a href="/Game">Try Game</a>
             </div>
           </div>
         );
