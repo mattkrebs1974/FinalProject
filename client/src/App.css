@@ -33,9 +33,11 @@ display:block;
 
 .title {
 
-  font-size: 10vw;
+  font-size: 8vw;
   text-align: center;
   line-height: 20px;
+  
+  
 }
 
 .enter a {

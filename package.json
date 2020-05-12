@@ -1,5 +1,5 @@
 {
-  "name": "brainguage",
+  "name": "braingauge",
   "version": "1.0.0",
   "description": "This App takes in users performance on simple mental exercises and gives feedback to the user on how that performance relates to the users self-ratings of how \"hungry/full\", \"tired/refreshed\", \"sad/happy,\" \"lazy/motivated\"  they feel.",
   "main": "server.js",
@@ -9,19 +9,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mattkrebs1974/BrainGuage.git"
+    "url": "git+https://github.com/mattkrebs1974/BrainGauge.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mattkrebs1974/BrainGuage/issues"
+    "url": "https://github.com/mattkrebs1974/BrainGauge/issues"
   },
-  "homepage": "https://github.com/mattkrebs1974/BrainGuage#readme",
+  "homepage": "https://github.com/mattkrebs1974/BrainGauge#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mysql2": "^2.1.0",
-    "nodemon": "^2.0.3",
-    "sequelize": "^5.21.7"
+    "md5": "^2.2.1",
+    "mongoose": "^5.9.13",
+    "nodemon": "^2.0.3"
   }
 }
