@@ -1,17 +1,8 @@
 const db = require("../models")
 const md5 = require("md5");
 
-// const getSession = (account)=>{
-
-//     return {
-//         id: account._id,
-//         name: account.name,
-//         email: account.email,
-//         token: md5(account.email + account.date)
-//     }
-// }; 
-
-create: function(req,res) {
+module.exports = {
+create: function (req,res) {
 
     console.log("Creating user . . . ");
     let account = req.body;
@@ -26,4 +17,5 @@ create: function(req,res) {
     console.log(err);
     res.status(422).json(err);
 });
+}
 }

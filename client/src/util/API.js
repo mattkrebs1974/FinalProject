@@ -1,15 +1,12 @@
 import axios from "axios";
-// import { resolve } from 'dns';
-// import { rejects } from 'assert';
 
 export default {
-    register:function(name, email, password)
-    {
-            return axios.post("/api/user", {
-                name,
-                email,
-                password,
-        
-            });
-    }
-}
+  // Saves a user to the database
+  function (userData) {
+    return axios.post("/api/users", userData);
+  },
+
+  getUsers: function () {
+    return axios.get("/api/users");
+  },
+};
