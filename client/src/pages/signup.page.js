@@ -3,7 +3,15 @@ import API from "../util/API";
 
 // import { Link } from "react-router-dom";
 
+
 class signup extends Component {
+
+  state = {
+firstname:"matt",
+lastname: "k",
+email: "mattK@gmail.com",
+password: "aaaaaaaa"
+  }
   
     loadUsers = () => {
     API.getUsers()
