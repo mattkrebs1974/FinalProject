@@ -6,31 +6,42 @@ import API from "../util/API";
 
 
 class signup extends Component {
-
   state = {
-firstname:"matt",
-lastname: "k",
-email: "mattK@gmail.com",
-password: "aaaaaaaa"
-  }
-  
-    loadUsers = () => {
+    firstname: "",
+    lastname: "",
+    email: "",
+    password: "",
+  };
+
+  loadUsers = () => {
     API.getUsers()
       .then((res) =>
         this.setState({
           user: res.data,
-          firstname: "w",
-          lastname: "w",
-          email: "w",
-          password: "w"
+          firstname: "",
+          lastname: "",
+          email: "",
+          password: "",
         })
       )
       .catch((err) => console.log(err));
   };
 
+  handleInputChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value,
+    });
+  };
+
   handleFormSubmit = (event) => {
     event.preventDefault();
-  
+    if (
+      this.state.firstname &&
+      this.state.lastname &&
+      this.state.email &&
+      this.state.password
+    ) {
       API.saveUser({
         firstname: this.state.firstname,
         lastname: this.state.lastname,
@@ -38,9 +49,11 @@ password: "aaaaaaaa"
         password: this.state.password,
       })
         .then((res) => this.loadUsers())
-       
+
         .catch((err) => console.log(err));
-    
+    } else {
+      alert("All fields must be completed!");
+    }
   };
 
   render() {
@@ -51,6 +64,9 @@ password: "aaaaaaaa"
         <div className="form-group">
           <label>First name</label>
           <input
+            value={this.state.firstname}
+            onChange={this.handleInputChange}
+            name="firstname"
             type="text"
             className="firstname form-control"
             placeholder="First name"
@@ -60,6 +76,9 @@ password: "aaaaaaaa"
         <div className="form-group">
           <label>Last name</label>
           <input
+            value={this.state.lastname}
+            onChange={this.handleInputChange}
+            name="lastname"
             type="text"
             className="lastname form-control"
             placeholder="Last name"
@@ -69,6 +88,9 @@ password: "aaaaaaaa"
         <div className="form-group">
           <label>Email address</label>
           <input
+            value={this.state.email}
+            onChange={this.handleInputChange}
+            name="email"
             type="email"
             className="email form-control"
             placeholder="Enter email"
@@ -78,6 +100,9 @@ password: "aaaaaaaa"
         <div className="form-group">
           <label>Password</label>
           <input
+            value={this.state.password}
+            onChange={this.handleInputChange}
+            name="password"
             type="password"
             className="password form-control"
             placeholder="Enter password"
