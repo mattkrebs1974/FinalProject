@@ -11,7 +11,7 @@ const md5 = require("md5");
 //     }
 // }; 
 
-create: function(req,res) {
+create: (req,res) => {
 
     console.log("Creating user . . . ");
     let account = req.body;
