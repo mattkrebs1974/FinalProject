@@ -6,7 +6,7 @@ import Login from "./pages/login.page";
 import SignUp from "./pages/signup.page";
 import Home from "./pages/home.page";
 import GameOne from "./pages/Game.page"
-
+import Form from "./pages/Form.page";
 function App() {
   return (
     <Router>
@@ -54,6 +54,7 @@ function App() {
               <Route path="/sign-in" component={Login} />
               <Route path="/sign-up" component={SignUp} />
               <Route path="/Game" component={GameOne} />
+              <Route path="/Form" component={Form} />
             </Switch>
           </div>
         </div>
