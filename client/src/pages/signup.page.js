@@ -6,14 +6,15 @@ import API from "../util/API";
 
 
 class signup extends Component {
-  state = {
-    firstname: "",
-    lastname: "",
-    email: "",
-    password: "",
-  };
 
-  loadUsers = () => {
+  state = {
+firstname:"",
+lastname: "",
+email: "",
+password: ""
+  }
+  
+    loadUsers = () => {
     API.getUsers()
       .then((res) =>
         this.setState({
@@ -21,13 +22,13 @@ class signup extends Component {
           firstname: "",
           lastname: "",
           email: "",
-          password: "",
+          password: ""
         })
       )
       .catch((err) => console.log(err));
   };
 
-  handleInputChange = (event) => {
+ handleInputChange = (event) => {
     const { name, value } = event.target;
     this.setState({
       [name]: value,
@@ -36,24 +37,25 @@ class signup extends Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    if (
-      this.state.firstname &&
-      this.state.lastname &&
-      this.state.email &&
-      this.state.password
-    ) {
-      API.saveUser({
-        firstname: this.state.firstname,
-        lastname: this.state.lastname,
-        email: this.state.email,
-        password: this.state.password,
-      })
-        .then((res) => this.loadUsers())
+  if (
+    this.state.firstname &&
+    this.state.lastname &&
+    this.state.email &&
+    this.state.password
+  ) {
+    API.saveUser({
+      firstname: this.state.firstname,
+      lastname: this.state.lastname,
+      email: this.state.email,
+      password: this.state.password,
+    })
+      .then((res) => this.loadUsers(), (window.location.href = "/sign-in"))
 
-        .catch((err) => console.log(err));
-    } else {
-      alert("All fields must be completed!");
-    }
+      .catch((err) => console.log(err));
+  }
+  else{
+    alert("All fields must be completed!");
+  }
   };
 
   render() {

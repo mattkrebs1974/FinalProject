@@ -2,8 +2,7 @@ import axios from "axios";
 
 export default {
   // Saves a user to the database
-  saveUser:function(userData) {
-   
+  saveUser: function (userData) {
     return axios.post("/api/users", userData);
   },
 
@@ -11,5 +10,7 @@ export default {
     return axios.get("/api/users");
   },
 
- 
+  login: function (user) {
+    return axios.post("/api/users/login", user);
+  },
 };
