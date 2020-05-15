@@ -2,6 +2,12 @@ const db = require("../models")
 const md5 = require("md5");
 
 module.exports = {
+
+findAll: function (req,res){
+
+console.log("working")
+},
+
 create: function (req,res) {
 
     console.log("Creating user . . . ");
@@ -10,8 +16,8 @@ create: function (req,res) {
     account.password = md5(req.body.password);
     db.user.create(account)
         .then((dbModel) => {
-            console.log(getSession(dbModel));
-            res.json(getSession(dbModel));
+          
+            res.json(dbModel);
         })
 .catch((err) => {
     console.log(err);

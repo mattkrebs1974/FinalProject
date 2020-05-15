@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../util/API";
 
+
 // import { Link } from "react-router-dom";
 
 
@@ -18,10 +19,10 @@ password: "aaaaaaaa"
       .then((res) =>
         this.setState({
           user: res.data,
-          firstname: "",
-          lastname: "",
-          email: "",
-          password: ""
+          firstname: "w",
+          lastname: "w",
+          email: "w",
+          password: "w"
         })
       )
       .catch((err) => console.log(err));
@@ -29,7 +30,7 @@ password: "aaaaaaaa"
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    if (1+1===2) {
+  
       API.saveUser({
         firstname: this.state.firstname,
         lastname: this.state.lastname,
@@ -37,8 +38,9 @@ password: "aaaaaaaa"
         password: this.state.password,
       })
         .then((res) => this.loadUsers())
+       
         .catch((err) => console.log(err));
-    }
+    
   };
 
   render() {
