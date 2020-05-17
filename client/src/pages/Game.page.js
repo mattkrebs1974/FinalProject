@@ -7,6 +7,16 @@ function rando(){
 return Math.floor(Math.random()*400)+200;
 }
 
+function getRandomColor() {
+
+  var letters = "0123456789ABCDEF".split('');
+  var color = "#";
+  for (var i = 0; i < 6; i++) {
+      color += letters[Math.round(Math.random() * 15)];
+  } //ends for loop 
+  return color;
+
+}
   
 export default class Home extends Component {
 
@@ -78,7 +88,8 @@ componentDidMount(){
           right: this.state.x,
           height: 100,
           width: 100,
-          backgroundColor: 'yellow'
+          borderradius: 50,
+          backgroundColor: getRandomColor()
         }}
         onClick={() => {this.move( 
               )}}
