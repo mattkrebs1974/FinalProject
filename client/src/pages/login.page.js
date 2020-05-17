@@ -1,20 +1,17 @@
 import React, { Component } from "react";
 import API from "../util/API";
 
-
 class login extends Component {
-  
-  
   componentDidMount() {
-
-localStorage.clear();
-
+    localStorage.clear();
     console.log("Login Component DID MOUNT!");
   }
 
   state = {
     email: "",
     password: "",
+    rememberMe: false,
+    firstname: "",
   };
 
   loadUsers = () => {
@@ -43,8 +40,15 @@ localStorage.clear();
         password: this.state.password,
       })
         .then((res) => {
-          console.log(res, "adsfaafasfa");
+          console.log(res, "adsfaafasfa", res.data.firstname);
           if (res) {
+            const firstname = res.data.firstname;
+            const { email, rememberMe } = this.state;
+            console.log("this is first name", firstname);
+            localStorage.setItem("rememberMe", rememberMe);
+            localStorage.setItem("email", email);
+            localStorage.setItem("firstname", firstname);
+
             window.location.href = "/Form";
           }
         })
@@ -86,6 +90,9 @@ localStorage.clear();
         <div className="form-group">
           <div className="custom-control custom-checkbox">
             <input
+              checked={this.state.rememberMe}
+              onChange={this.handleInputChange}
+              name="rememberMe"
               type="checkbox"
               className="custom-control-input"
               id="customCheck1"
