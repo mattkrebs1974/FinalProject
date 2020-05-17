@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class Home extends Component {
                  
   componentDidMount() {
-    localStorage.clear();
+                     localStorage.clear();
                    console.log("Home Component DID MOUNT!");
                  }
 

@@ -9,7 +9,7 @@ class signup extends Component {
   
   
   componentDidMount() {
-    localStorage.clear();
+     localStorage.clear();
     console.log("Signup Component DID MOUNT!");
   }
 

@@ -45,9 +45,12 @@ db.user
 
   .then((dbModel) => {
 
+
     if (md5(req.body.password) === dbModel.password){
 
-console.log("password correct")
+console.log("password correct",dbModel)
+
+
 res.send(dbModel)
 
     } else {
