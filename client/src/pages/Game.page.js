@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
 
-
+var counter = 0
 var click= 0;
 function rando(){
-return Math.floor(Math.random()*200)+200;
+return Math.floor(Math.random()*400)+200;
 }
 
   
@@ -22,6 +22,7 @@ export default class Home extends Component {
         y: 0, 
         hidden: false,
         startTime: 0,
+        score: 0
        };
   }
 
@@ -35,7 +36,8 @@ export default class Home extends Component {
       y:  rando(),
       userResult:  (Date.now() -this.state.startTime)/ 1000,
       startTime: Date.now(),
-      hidden: true
+      hidden: true, 
+      score: this.state.score + trackScore
     }));
     const timeout = setTimeout(() => {
       this.setState(state => ({
@@ -43,12 +45,15 @@ export default class Home extends Component {
       }));
     }, 1000)
 
-    if (click===5){
+    if (click===8){
     clearTimeout(timeout)
-  
+
    }
+var trackScore = (Date.now() -this.state.startTime)/ 1000
   }
-  
+   
+
+ 
 
 
 componentDidMount(){
@@ -79,8 +84,9 @@ componentDidMount(){
               )}}
         ></div>
         <h1> Your results: {this.state.userResult} seconds </h1>
-        {click===5? <a href = "http://localhost:3000/Game"> <img src= 'https://www.freepnglogos.com/uploads/button-png/red-button-circle-image-pixabay-20.png' style={{ width: 400, height: 400}} /> </a>: null } 
-        {click===5? <h1> Please select giant red button to proceed</h1>: null } 
+        <h2>Your composite score: {this.state.score}</h2>
+        {click===8? <a href = "http://localhost:3000/Game"> <img src= 'https://www.freepnglogos.com/uploads/button-png/red-button-circle-image-pixabay-20.png' style={{ width: 400, height: 400}} /> </a>: null } 
+        {click===8? <h1> Please select giant red button to proceed</h1>: null } 
 
       </div>
       </div>
