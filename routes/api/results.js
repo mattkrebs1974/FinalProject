@@ -1,12 +1,12 @@
 const router = require("express").Router();
 const resultsController = require("../../controllers/resultsController");
 
-debugger;
+
 
 router.route("/performance")
-.get(resultsController.findAll)
+.get(resultsController.gameresults)
 
 router.route("/survey")
-.get(resultsController.findAll);
+.get(resultsController.surveyresults);
 
 module.exports = router;

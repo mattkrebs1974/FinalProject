@@ -6,8 +6,9 @@ import Login from "./pages/login.page";
 import SignUp from "./pages/signup.page";
 import Home from "./pages/home.page";
 import GameOne from "./pages/Game.page"
-import Form from "./pages/Form.page";
-import Chart from "./pages/linegraph.page";
+
+
+import Results from "./pages/linegraph.page";
 import Chart2 from "./pages/areagraph.page";
 import Chart3 from "./pages/histogram.page";
 import Chart4 from "./pages/scatter.page";
@@ -67,8 +68,8 @@ function App() {
               <Route path="/sign-in" component={Login} />
               <Route path="/sign-up" component={SignUp} />
               <Route path="/Game" component={GameOne} />
-              <Route path="/Form" component={Form} />
-              <Route path="/Chart" component={Chart} />
+             
+              <Route path="/Results" component={Results} />
               <Route path="/Chart2" component={Chart2} />
               <Route path="/Chart3" component={Chart3} />
               <Route path="/Chart4" component={Chart4} />

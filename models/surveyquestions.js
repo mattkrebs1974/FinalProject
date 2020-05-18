@@ -26,5 +26,5 @@ const SurveySchema = new Schema({
   },
 });
 
-const survey = mongoose.model("performance", SurveySchema);
+const survey = mongoose.model("survey", SurveySchema);
 module.exports = survey;

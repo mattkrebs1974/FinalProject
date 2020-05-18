@@ -15,10 +15,12 @@ export default {
   },
 
   performancedata: function () {
+    console.log("performance it is")
     return axios.get("/api/data/performance");
   },
 
   surveydata: function () {
+     console.log("survey it is");
     return axios.get("/api/data/survey")
   },
 };

@@ -3,8 +3,6 @@ const userController = require("../../client/src/pages/Form.page");
 
 
 
-router.route("/Form")
-.post(userController.create);
 
 
 
