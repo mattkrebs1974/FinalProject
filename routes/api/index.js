@@ -17,6 +17,13 @@ router.post("/score", function (req, res) {
     }
   })
 })
+const surveyRoutes = require("./survey")
+const gameRoutes = require("./game")
+const resultsRoutes = require("./results")
+
+router.use("/users",userRoutes);
+router.use("/data",resultsRoutes);
+
 
 // If no API routes are hit, send the React app
 router.use((req, res) =>
