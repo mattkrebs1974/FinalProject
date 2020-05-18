@@ -7,6 +7,7 @@ import SignUp from "./pages/signup.page";
 import Home from "./pages/home.page";
 import GameOne from "./pages/Game.page"
 import Form from "./pages/Form.page";
+import Instructions from "./pages/Instructions.page";
 function App() {
   return (
     <Router>
@@ -43,6 +44,11 @@ function App() {
                   Sign up
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={"/Instructions"}>
+                  Instructions
+                </Link>
+              </li>
             </ul>
           </div>
         </nav>
@@ -55,6 +61,7 @@ function App() {
               <Route path="/sign-up" component={SignUp} />
               <Route path="/Game" component={GameOne} />
               <Route path="/Form" component={Form} />
+              <Route path="/Instructions" component={Instructions} />
             </Switch>
           </div>
         </div>
