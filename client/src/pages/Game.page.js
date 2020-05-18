@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./game.css";
 
 
 var counter = 0
 var click = 0;
 function rando() {
-  return Math.floor(Math.random() * 400) + 200;
+  return Math.floor(Math.random() * 375) + 200;
+}
+function randoInterval() {
+  return Math.floor(Math.random() * 4000) + 500;
 }
 
 function getRandomColor() {
@@ -56,12 +60,15 @@ export default class Home extends Component {
       this.setState(state => ({
         hidden: false
       }));
-    }, 1000)
+    }, randoInterval())
+
+
+console.log("time: ",randoInterval());
 
     if (click === 8) {
       clearTimeout(timeout)
       axios.post('/api/score', {
-        score: this.state.score,
+        score: this.state.score/8,
         userResult: this.state.userResult
       })
         .then(function (response) {
@@ -93,7 +100,7 @@ export default class Home extends Component {
     console.log("y:", this.state.y)
     return (
       <div >
-        <div style={{ position: 'relative', height: 500 }}>
+        <div className= "app" style={{ position: 'relative', height: 500 }}>
           <div style={{
             position: 'absolute',
             visibility: this.state.hidden ? 'hidden' : 'visible',
@@ -109,8 +116,8 @@ export default class Home extends Component {
               )
             }}
           ></div>
-          <h1> Your results: {this.state.userResult[this.state.userResult.length - 1]} seconds </h1>
-          <h2>Your composite score: {this.state.score}</h2>
+          <h1> Your reaction speed: {this.state.userResult[this.state.userResult.length - 1]} seconds </h1>
+          <h2>your composite score: {this.state.score} seconds</h2>
           {click === 8 ? <a href="http://localhost:3000/Game"> <img src='https://www.freepnglogos.com/uploads/button-png/red-button-circle-image-pixabay-20.png' style={{ width: 400, height: 400 }} /> </a> : null}
           {click === 8 ? <h1> Please select giant red button to proceed</h1> : null}
 
