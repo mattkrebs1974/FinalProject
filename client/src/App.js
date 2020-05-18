@@ -11,6 +11,7 @@ import Chart from "./pages/linegraph.page";
 import Chart2 from "./pages/areagraph.page";
 import Chart3 from "./pages/histogram.page";
 import Chart4 from "./pages/scatter.page";
+import Instructions from "./pages/Instructions.page";
 
 
 
