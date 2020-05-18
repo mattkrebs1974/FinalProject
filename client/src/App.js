@@ -50,6 +50,11 @@ function App() {
                   Sign up
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={"/Instructions"}>
+                  Instructions
+                </Link>
+              </li>
             </ul>
           </div>
         </nav>
@@ -66,6 +71,7 @@ function App() {
               <Route path="/Chart2" component={Chart2} />
               <Route path="/Chart3" component={Chart3} />
               <Route path="/Chart4" component={Chart4} />
+              <Route path="/Instructions" component={Instructions} />
             </Switch>
           </div>
         </div>
