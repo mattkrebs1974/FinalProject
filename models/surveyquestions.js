@@ -1,6 +1,13 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+
 const SurveySchema = new Schema({
+  
+   email:{
+    type:String,
+    required:true,
+  },
+  
   QuestionOne: {
     type: Number,
     required: true,
@@ -18,5 +25,6 @@ const SurveySchema = new Schema({
     required: true,
   },
 });
-const performance = mongoose.model(“performance”, SurveySchema);
-module.exports = performance;
+
+const survey = mongoose.model("survey", SurveySchema);
+module.exports = survey;
