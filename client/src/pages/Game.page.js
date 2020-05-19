@@ -136,7 +136,7 @@ export default class Home extends Component {
                          <h2>
                            your composite score: {this.state.score} seconds
                          </h2>
-                         {click === 1 ? (
+                         {click === 8 ? (
                            <a href="http://localhost:3000/Results">
                              {" "}
                              <img

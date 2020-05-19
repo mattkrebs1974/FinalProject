@@ -6,6 +6,7 @@ import Login from "./pages/login.page";
 import SignUp from "./pages/signup.page";
 import Home from "./pages/home.page";
 import GameOne from "./pages/Game.page"
+import Welcome from "./pages/Welcome.page"
 
 
 import Results from "./pages/linegraph.page";
@@ -68,6 +69,7 @@ function App() {
               <Route path="/sign-in" component={Login} />
               <Route path="/sign-up" component={SignUp} />
               <Route path="/Game" component={GameOne} />
+              <Route path="/Welcome" component={Welcome} />
              
               <Route path="/Results" component={Results} />
               <Route path="/Chart2" component={Chart2} />
