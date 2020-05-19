@@ -2,17 +2,9 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const performanceSchema = new Schema({
-  name:{
+  email:{
     type:String,
     required:true,
-  },
-    timesPlayed: {
-    type: Number,
-    required: true,
-  },
-  CurrentAverage: {
-    type: Number,
-    required: true,
   },
   CurrentScore: {
     type: Number,
@@ -24,6 +16,7 @@ const performanceSchema = new Schema({
 },
 
 });
+
 
 const performance = mongoose.model("performance", performanceSchema);
 module.exports = performance;
