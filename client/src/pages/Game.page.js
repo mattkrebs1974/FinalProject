@@ -10,8 +10,9 @@ function rando() {
 }
 function randoInterval() {
   return Math.floor(Math.random() * 4000) + 500;
+  
 }
-
+console.log("don't worry" + counter);
 function getRandomColor() {
   var letters = "0123456789ABCDEF".split("");
   var color = "#";
@@ -120,12 +121,13 @@ export default class Home extends Component {
           </h1>
           <h2>your composite score: {this.state.score} seconds</h2>
           {click === 1 ? (
-            <a href="http://localhost:3000/Results">
+            <a href="http://localhost:3000/Results" alt="description of image">
               {" "}
               <img
                 onClick={this.gotoresults}
                 id="resultspage"
                 src="https://www.freepnglogos.com/uploads/button-png/red-button-circle-image-pixabay-20.png"
+                alt="description of imag"
                 style={{ width: 400, height: 400 }}
               />{" "}
             </a>

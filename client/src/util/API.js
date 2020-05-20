@@ -14,13 +14,13 @@ export default {
     return axios.post("/api/users/login", user);
   },
 
-  performancedata: function () {
+  performancedata: function (data) {
     console.log("performance it is");
-    return axios.get("/api/data/performance");
+    return axios.post("/api/data/performance",data);
   },
 
-  surveydata: function () {
+  surveydata: function (data) {
     console.log("survey it is");
-    return axios.get("/api/data/survey");
+    return axios.post("/api/data/survey",data);
   },
 };

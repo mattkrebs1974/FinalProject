@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const performanceSchema = new Schema({
-  name:{
+  email:{
     type:String,
     required:true,
   },
