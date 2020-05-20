@@ -5,8 +5,9 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./pages/login.page";
 import SignUp from "./pages/signup.page";
 import Home from "./pages/home.page";
-import GameOne from "./pages/Game.page"
-import Welcome from "./pages/Welcome.page"
+import GameOne from "./pages/Game.page";
+import Welcome from "./pages/Welcome.page";
+import Form from "./pages/Form.page";
 
 
 import Results from "./pages/linegraph.page";
@@ -70,6 +71,7 @@ function App() {
               <Route path="/sign-up" component={SignUp} />
               <Route path="/Game" component={GameOne} />
               <Route path="/Welcome" component={Welcome} />
+              <Route path="/Form" component={Form} />
              
               <Route path="/Results" component={Results} />
               <Route path="/Chart2" component={Chart2} />
