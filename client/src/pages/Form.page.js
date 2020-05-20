@@ -5,7 +5,7 @@ export default class Form extends Component {
       super();
       this.state = {
         name: "React"
-      };
+       };
       this.onValueChange = this.onValueChange.bind(this);
       this.formSubmit = this.formSubmit.bind(this);
     }
