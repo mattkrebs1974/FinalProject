@@ -1,5 +1,5 @@
 module.exports = {
-  user: require("./user"),
-  performance:require("./performance")
+  users: require("./user"),
+  performances:require("./performance")
  
 };

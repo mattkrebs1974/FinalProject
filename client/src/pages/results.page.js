@@ -9,15 +9,15 @@ class results extends Component {
   }
 
   state = {
-   email:""
+    email: "",
   };
 
-  loadUsers = () => {
-    API.performancedata({something:"value"})
+  loadUsers = (event) => {
+    event.preventDefault();
+    API.performancedata({ something: "value" })
       .then((res) =>
         this.setState({
           email: "",
-         
         })
       )
       .catch((err) => console.log(err));
@@ -25,11 +25,13 @@ class results extends Component {
 
 
 
+
+  
   render() {
     return (
-      <form>
-       
 
+      
+      <form>
         <button
           id="submit"
           type="submit"
@@ -38,7 +40,6 @@ class results extends Component {
         >
           Show Data
         </button>
-       
       </form>
     );
   }

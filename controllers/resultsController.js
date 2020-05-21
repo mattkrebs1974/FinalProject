@@ -6,9 +6,9 @@ module.exports = {
   
 gameresults: function (req, res) {
 console.log("usercontroller login", req.body)
-
-db.performance
-  .find({})
+const findemail = window.localStorage.getItem("email");
+db.performances
+  .find({email:findemail})
 
   .then((dbModel) => {
 
@@ -30,7 +30,7 @@ surveyresults: function (req, res) {
 console.log("usercccc", req.body)
 let user = window.localStorage.getItem();
 console.log("user", user)
-db.survey
+db.surveys
   .findAll({ email: req.body.email })
 
   .then((dbModel) => {

@@ -21,7 +21,7 @@ module.exports = {
     let account = req.body;
     account.email = req.body.email.toLowerCase();
     account.password = md5(req.body.password);
-    db.user
+    db.users
       .create(account)
       .then((dbModel) => {
   
@@ -40,7 +40,7 @@ module.exports = {
 login: function (req, res) {
 console.log("usercontroller login", req.body)
 let logininfo = req.body;
-db.user
+db.users
   .findOne({ email: req.body.email })
 
   .then((dbModel) => {
