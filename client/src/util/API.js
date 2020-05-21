@@ -6,6 +6,10 @@ export default {
     return axios.post("/api/users", userData);
   },
 
+  sendSurvey: function (surveyData) {
+    return axios.post("/api/survey", surveyData);
+  },
+
   getUsers: function () {
     return axios.get("/api/users");
   },
