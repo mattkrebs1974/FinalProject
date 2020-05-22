@@ -29,6 +29,11 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(routes);
 
+const dbOptions = {
+useNewUrlParser: true,
+useUnifiedTopology: true,
+useCreateIndex: true
+}
 
 // Connect to the mongoose database
 const dbOptions = {
@@ -38,7 +43,7 @@ const dbOptions = {
 }
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/braingauge",dbOptions
+  process.env.MONGODB_URI || "mongodb://localhost/braingauge", dbOptions
 );
 
 
