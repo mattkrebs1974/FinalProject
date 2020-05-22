@@ -18,8 +18,12 @@ const performanceSchema = new Schema({
 });
 
 
-const performance = mongoose.model("performance", performanceSchema);
-module.exports = performance;
+const performances = mongoose.model("performance", performanceSchema);
+module.exports = performances;
+
+
+
+
 
 
 

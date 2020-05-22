@@ -30,5 +30,5 @@ date: {
 
 
 
-const user = mongoose.model("user", UserSchema);
-module.exports = user;
+const users = mongoose.model("user", UserSchema);
+module.exports = users;

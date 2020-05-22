@@ -4,9 +4,12 @@ const resultsController = require("../../controllers/resultsController");
 
 
 router.route("/performance")
-.get(resultsController.gameresults)
+
+.post(resultsController.gameresults)
 
 router.route("/survey")
+.post(resultsController.surveyresults)
 .get(resultsController.surveyresults);
+
 
 module.exports = router;

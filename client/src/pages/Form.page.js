@@ -1,280 +1,348 @@
 import React, { Component } from "react";
-// import { RadioGroup, RadioButton } from 'react-radio-buttons';
-import "../util/Form.css"
 
+import "./radio.css";
 
-
-
-export default class Form extends Component {
- 
-    constructor() {
-      super();
-      this.state = {
-        name: "React"
-      };
-      this.onValueChange = this.onValueChange.bind(this);
-      this.formSubmit = this.formSubmit.bind(this);
-    }
-    onValueChange(event) {
-      this.setState({
-        selectedOption: event.target.value
-      });
-    }
-    formSubmit(event) {
-      event.preventDefault();
-      console.log(this.state.selectedOption)
-    }
-    render() {
-      return (
-        <form onSubmit={this.formSubmit}>
-          <div className="radio">
-            <label>
-              <h3> On a scale of 1 - 5 how well rested do you feel</h3>
-              <input
-                type="radio"
-                value="1"
-                checked={this.state.selectedOption === "1"}
-                onChange={this.onValueChange}
-              />
-              1 
-            </label>
-          </div>
-          <div className="radio">
-            <label>
-              <input
-                type="radio"
-                value="2"
-                checked={this.state.selectedOption === "2"}
-                onChange={this.onValueChange}
-              />
-              2
-            </label>
-          </div>
-          <div className="radio">
-            <label>
-              <input
-                type="radio"
-                value="3"
-                checked={this.state.selectedOption === "3"}
-                onChange={this.onValueChange}
-              />
-              3
-            </label>
-          </div>
-          <div className="radio">
-            <label>
-              <input
-                type="radio"
-                value="4"
-                checked={this.state.selectedOption === "4"}
-                onChange={this.onValueChange}
-              />
-              4
-            </label>
-          </div>
-          <div className="radio">
-            <label>
-              <input
-                type="radio"
-                value="5"
-                checked={this.state.selectedOption === "5"}
-                onChange={this.onValueChange}
-              />
-              5
-            </label>
-          </div>
-{/*          
-          <div>
-            Selected option is : {this.state.selectedOption}
-          </div> */}
-          <button className="btn btn-default" type="submit" >
-            Submit
-          </button>
-          <div className="radio">
-            <label>
-              <h3> On a scale of 1- 5 how sad or happy do you feel today</h3>
-              <input
-                type="radio"
-                value="6"
-                checked={this.state.selectedOption === "6"}
-                onChange={this.onValueChange}
-              />
-              1 
-            </label>
-          </div>
-          <div className="radio">
-            <label>
-              <input
-                type="radio"
-                value="7"
-                checked={this.state.selectedOption === "7"}
-                onChange={this.onValueChange}
-              />
-              2
-            </label>
-          </div>
-          <div className="radio">
-            <label>
-              <input
-                type="radio"
-                value="8"
-                checked={this.state.selectedOption === "8"}
-                onChange={this.onValueChange}
-              />
-              3
-            </label>
-          </div>
-          <div className="radio">
-            <label>
-              <input
-                type="radio"
-                value="9"
-                checked={this.state.selectedOption === "9"}
-                onChange={this.onValueChange}
-              />
-              4
-            </label>
-          </div>
-          <div className="radio">
-            <label>
-              <input
-                type="radio"
-                value="10"
-                checked={this.state.selectedOption === "10"}
-                onChange={this.onValueChange}
-              />
-              5
-            </label>
-          </div>
-          <button className="btn btn-default" type="submit" >
-            Submit
-          </button>
-
-          <div className="radio">
-            <label>
-              <h3> On a scale of 1 - 5 What is your level of hunger</h3>
-              <input
-                type="radio"
-                value="11"
-                checked={this.state.selectedOption === "11"}
-                onChange={this.onValueChange}
-              />
-              1 
-            </label>
-          </div>
-
-          <div className="radio">
-            <label>
-              <input
-                type="radio"
-                value="12"
-                checked={this.state.selectedOption === "12"}
-                onChange={this.onValueChange}
-              />
-              2
-            </label>
-          </div>
-          <div className="radio">
-            <label>
-              <input
-                type="radio"
-                value="13"
-                checked={this.state.selectedOption === "13"}
-                onChange={this.onValueChange}
-              />
-              3
-            </label>
-          </div>
-          <div className="radio">
-            <label>
-              <input
-                type="radio"
-                value="14"
-                checked={this.state.selectedOption === "14"}
-                onChange={this.onValueChange}
-              />
-              4
-            </label>
-          </div>
-          <div className="radio">
-            <label>
-              <input
-                type="radio"
-                value="15"
-                checked={this.state.selectedOption === "15"}
-                onChange={this.onValueChange}
-              />
-              5
-            </label>
-          </div>
-          <button className="btn btn-default" type="submit" >
-            Submit
-          </button>
-
-          <div className="radio">
-            <label>
-              <h3> On a scale of 1 - 5 how physically active have you been today</h3>
-              <input
-                type="radio"
-                value="16"
-                checked={this.state.selectedOption === "16"}
-                onChange={this.onValueChange}
-              />
-              1 
-            </label>
-          </div>
-
-          <div className="radio">
-            <label>
-              <input
-                type="radio"
-                value="17"
-                checked={this.state.selectedOption === "17"}
-                onChange={this.onValueChange}
-              />
-              2
-            </label>
-          </div>
-          <div className="radio">
-            <label>
-              <input
-                type="radio"
-                value="18"
-                checked={this.state.selectedOption === "18"}
-                onChange={this.onValueChange}
-              />
-              3
-            </label>
-          </div>
-          <div className="radio">
-            <label>
-              <input
-                type="radio"
-                value="19"
-                checked={this.state.selectedOption === "19"}
-                onChange={this.onValueChange}
-              />
-              4
-            </label>
-          </div>
-          <div className="radio">
-            <label>
-              <input
-                type="radio"
-                value="20"
-                checked={this.state.selectedOption === "20"}
-                onChange={this.onValueChange}
-              />
-              5
-            </label>
-          </div>
-          <button className="btn btn-default" type="submit" >
-            Submit
-          </button>
-
-
-        </form>
-        
-      );
-    }
+class trial extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: "React",
+    };
+    this.onValueChange = this.onValueChange.bind(this);
+    this.onValueChange2 = this.onValueChange2.bind(this);
+    this.onValueChange3 = this.onValueChange3.bind(this);
+    this.onValueChange4 = this.onValueChange4.bind(this);
+    this.onValueChange5 = this.onValueChange5.bind(this);
+    this.formSubmit = this.formSubmit.bind(this);
   }
+
+  onValueChange(event) {
+    this.setState({
+      selectedOption: event.target.value,
+    });
+  }
+  onValueChange2(event) {
+    this.setState({
+      selectedOption2: event.target.value,
+    });
+  }
+  onValueChange3(event) {
+    this.setState({
+      selectedOption3: event.target.value,
+    });
+  }
+  onValueChange4(event) {
+    this.setState({
+      selectedOption4: event.target.value,
+    });
+  }
+  onValueChange5(event) {
+    this.setState({
+      selectedOption5: event.target.value,
+    });
+  }
+
+  formSubmit(event) {
+    event.preventDefault();
+    console.log(this.state.selectedOption);
+    console.log(this.state.selectedOption2);
+    console.log(this.state.selectedOption3);
+    console.log(this.state.selectedOption4);
+    console.log(this.state.selectedOption5);
+  }
+  render() {
+    return (
+      <div>
+        <form>
+          <div>
+            <form>
+              <div data-role="fieldcontain">
+                <fieldset data-role="controlgroup" namee="bob">
+                  <legend>How tired/awake are you?</legend>
+                  very tired
+                  <input
+                    type="radio"
+                    name="radiochoice1"
+                    id="radio-choice-1"
+                    value="1"
+                    checked={this.state.selectedOption === "1"}
+                    onChange={this.onValueChange}
+                  />
+                  <label htmlFor="radio-choice-1"> 1 </label>
+                  <input
+                    type="radio"
+                    name="radiochoice1"
+                    id="radio-choice-2"
+                    value="2"
+                    checked={this.state.selectedOption === "2"}
+                    onChange={this.onValueChange}
+                  />
+                  <label htmlFor="radio-choice-2"> 2 </label>
+                  <input
+                    type="radio"
+                    name="radiochoice1"
+                    id="radio-choice-3"
+                    value="3"
+                    checked={this.state.selectedOption === "3"}
+                    onChange={this.onValueChange}
+                  />
+                  <label htmlFor="radio-choice-3"> 3 </label>
+                  <input
+                    type="radio"
+                    name="radiochoice1"
+                    id="radio-choice-4"
+                    value="4"
+                    checked={this.state.selectedOption === "4"}
+                    onChange={this.onValueChange}
+                  />
+                  <label htmlFor="radio-choice-4"> 4 </label>
+                  <input
+                    type="radio"
+                    name="radiochoice1"
+                    id="radio-choice-5"
+                    value="5"
+                    checked={this.state.selectedOption === "5"}
+                    onChange={this.onValueChange}
+                  />
+                  <label htmlFor="radio-choice-5"> 5 </label> wide awake
+                </fieldset>
+              </div>
+            </form>
+          </div>
+          <div>
+            <form>
+              <div data-role="fieldcontain">
+                <fieldset data-role="controlgroup" namee="lola">
+                  <legend>How hungry/stuffed are you?</legend>
+                  very hungry
+                  <input
+                    type="radio"
+                    name="radiochoice2"
+                    id="radio-choice-1"
+                    value="1"
+                    checked={this.state.selectedOption2 === "1"}
+                    onChange={this.onValueChange2}
+                  />
+                  <label htmlFor="radio-choice-1"> 1 </label>
+                  <input
+                    type="radio"
+                    name="radiochoice2"
+                    id="radio-choice-2"
+                    value="2"
+                    checked={this.state.selectedOption2 === "2"}
+                    onChange={this.onValueChange2}
+                  />
+                  <label htmlFor="radio-choice-2"> 2 </label>
+                  <input
+                    type="radio"
+                    name="radiochoice2"
+                    id="radio-choice-3"
+                    value="3"
+                    checked={this.state.selectedOption2 === "3"}
+                    onChange={this.onValueChange2}
+                  />
+                  <label htmlFor="radio-choice-3"> 3 </label>
+                  <input
+                    type="radio"
+                    name="radiochoice2"
+                    id="radio-choice-4"
+                    value="4"
+                    checked={this.state.selectedOption2 === "4"}
+                    onChange={this.onValueChange2}
+                  />
+                  <label htmlFor="radio-choice-4"> 4 </label>
+                  <input
+                    type="radio"
+                    name="radiochoice2"
+                    id="radio-choice-5"
+                    value="5"
+                    checked={this.state.selectedOption2 === "5"}
+                    onChange={this.onValueChange2}
+                  />
+                  <label htmlFor="radio-choice-5"> 5 </label> stuffed
+                </fieldset>
+              </div>
+            </form>
+          </div>
+          <div>
+            <form>
+              <div data-role="fieldcontain">
+                <fieldset data-role="controlgroup">
+                  <legend>How hungry/stuffed are you?</legend>
+                  very hungry
+                  <input
+                    type="radio"
+                    name="radiochoice1"
+                    id="radio-choice-1"
+                    value="1"
+                    checked={this.state.selectedOption3 === "1"}
+                    onChange={this.onValueChange3}
+                  />
+                  <label htmlFor="radio-choice-1"> 1 </label>
+                  <input
+                    type="radio"
+                    name="radiochoice1"
+                    id="radio-choice-2"
+                    value="2"
+                    checked={this.state.selectedOption3 === "2"}
+                    onChange={this.onValueChange3}
+                  />
+                  <label htmlFor="radio-choice-2"> 2 </label>
+                  <input
+                    type="radio"
+                    name="radiochoice1"
+                    id="radio-choice-3"
+                    value="3"
+                    checked={this.state.selectedOption3 === "3"}
+                    onChange={this.onValueChange3}
+                  />
+                  <label htmlFor="radio-choice-3"> 3 </label>
+                  <input
+                    type="radio"
+                    name="radiochoice1"
+                    id="radio-choice-4"
+                    value="4"
+                    checked={this.state.selectedOption3 === "4"}
+                    onChange={this.onValueChange3}
+                  />
+                  <label htmlFor="radio-choice-4"> 4 </label>
+                  <input
+                    type="radio"
+                    name="radiochoice1"
+                    id="radio-choice-5"
+                    value="5"
+                    checked={this.state.selectedOption3 === "5"}
+                    onChange={this.onValueChange3}
+                  />
+                  <label htmlFor="radio-choice-5"> 5 </label> stuffed
+                </fieldset>
+              </div>
+            </form>
+          </div>
+          <div>
+            <form>
+              <div data-role="fieldcontain">
+                <fieldset data-role="controlgroup">
+                  <legend>How hungry/stuffed are you?</legend>
+                  very hungry
+                  <input
+                    type="radio"
+                    name="radiochoice1"
+                    id="radio-choice-1"
+                    value="1"
+                    checked={this.state.selectedOption4 === "1"}
+                    onChange={this.onValueChange4}
+                  />
+                  <label htmlFor="radio-choice-1"> 1 </label>
+                  <input
+                    type="radio"
+                    name="radiochoice1"
+                    id="radio-choice-2"
+                    value="2"
+                    checked={this.state.selectedOption4 === "2"}
+                    onChange={this.onValueChange4}
+                  />
+                  <label htmlFor="radio-choice-2"> 2 </label>
+                  <input
+                    type="radio"
+                    name="radiochoice1"
+                    id="radio-choice-3"
+                    value="3"
+                    checked={this.state.selectedOption4 === "3"}
+                    onChange={this.onValueChange4}
+                  />
+                  <label htmlFor="radio-choice-3"> 3 </label>
+                  <input
+                    type="radio"
+                    name="radiochoice1"
+                    id="radio-choice-4"
+                    value="4"
+                    checked={this.state.selectedOption4 === "4"}
+                    onChange={this.onValueChange4}
+                  />
+                  <label htmlFor="radio-choice-4"> 4 </label>
+                  <input
+                    type="radio"
+                    name="radiochoice1"
+                    id="radio-choice-5"
+                    value="5"
+                    checked={this.state.selectedOption4 === "5"}
+                    onChange={this.onValueChange4}
+                  />
+                  <label htmlFor="radio-choice-5"> 5 </label> stuffed
+                </fieldset>
+              </div>
+            </form>
+          </div>
+          <div>
+            <form>
+              <div data-role="fieldcontain">
+                <fieldset data-role="controlgroup">
+                  <legend>How hungry/stuffed are you?</legend>
+                  very hungry
+                  <input
+                    type="radio"
+                    name="radiochoice1"
+                    id="radio-choice-1"
+                    value="1"
+                    checked={this.state.selectedOption5 === "1"}
+                    onChange={this.onValueChange5}
+                  />
+                  <label htmlFor="radio-choice-1"> 1 </label>
+                  <input
+                    type="radio"
+                    name="radiochoice1"
+                    id="radio-choice-2"
+                    value="2"
+                    checked={this.state.selectedOption5 === "2"}
+                    onChange={this.onValueChange5}
+                  />
+                  <label htmlFor="radio-choice-2"> 2 </label>
+                  <input
+                    type="radio"
+                    name="radiochoice1"
+                    id="radio-choice-3"
+                    value="3"
+                    checked={this.state.selectedOption5 === "3"}
+                    onChange={this.onValueChange5}
+                  />
+                  <label htmlFor="radio-choice-3"> 3 </label>
+                  <input
+                    type="radio"
+                    name="radiochoice1"
+                    id="radio-choice-4"
+                    value="4"
+                    checked={this.state.selectedOption5 === "4"}
+                    onChange={this.onValueChange5}
+                  />
+                  <label htmlFor="radio-choice-4"> 4 </label>
+                  <input
+                    type="radio"
+                    name="radiochoice1"
+                    id="radio-choice-5"
+                    value="5"
+                    checked={this.state.selectedOption5 === "5"}
+                    onChange={this.onValueChange5}
+                  />
+                  <label htmlFor="radio-choice-5"> 5 </label> stuffed
+                </fieldset>
+              </div>
+            </form>
+          </div>
+          <fieldset>
+            <div className="bottom">
+              <button
+                className="btn btn-default"
+                type="submit"
+                onClick={this.formSubmit}
+              >
+                Submit
+              </button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    );
+  }
+}
+export default trial; 
