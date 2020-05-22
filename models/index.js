@@ -1,10 +1,7 @@
 module.exports = {
 
   users: require("./user"),
-  performances:require("./performance")
-
-  user: require("./user"),
-  performance: require("./performance"),
+  performances:require("./performance"),
   surveyquestions: require("./surveyquestions")
 
  
