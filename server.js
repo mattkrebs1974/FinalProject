@@ -36,6 +36,11 @@ useCreateIndex: true
 }
 
 // Connect to the mongoose database
+const dbOptions = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true
+}
 
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/braingauge", dbOptions

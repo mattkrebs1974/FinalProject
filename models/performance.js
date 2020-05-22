@@ -6,14 +6,6 @@ const performanceSchema = new Schema({
     type:String,
     required:true,
   },
-    timesPlayed: {
-    type: Number,
-    required: true,
-  },
-  CurrentAverage: {
-    type: Number,
-    required: true,
-  },
   CurrentScore: {
     type: Number,
     required: true,
@@ -25,8 +17,13 @@ const performanceSchema = new Schema({
 
 });
 
+
 const performances = mongoose.model("performance", performanceSchema);
 module.exports = performances;
+
+
+
+
 
 
 

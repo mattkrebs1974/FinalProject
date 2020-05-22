@@ -3,14 +3,19 @@ import axios from "axios";
 import "./game.css";
 import API from "../util/API";
 
+
 var counter = 0;
+
+
+
 var click = 0;
 function rando() {
   return Math.floor(Math.random() * 375) + 200;
 }
 function randoInterval() {
   return Math.floor(Math.random() * 4000) + 500;
-  
+
+
 }
 console.log("don't worry" + counter);
 function getRandomColor() {
@@ -140,3 +145,8 @@ export default class Home extends Component {
     );
   }
 }
+
+
+
+
+
