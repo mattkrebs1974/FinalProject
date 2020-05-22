@@ -4,10 +4,13 @@ export default {
   // Saves a user to the database
   saveUser: function (userData) {
     return axios.post("/api/users", userData);
+
   },
 
   sendSurvey: function (surveyData) {
     return axios.post("/api/survey", surveyData);
+
+
   },
 
   getUsers: function () {
@@ -17,6 +20,7 @@ export default {
   login: function (user) {
     return axios.post("/api/users/login", user);
   },
+
 
   performancedata: function (data) {
     console.log("performance it is");
@@ -28,3 +32,17 @@ export default {
     return axios.post("/api/data/survey",data);
   },
 };
+
+
+  performancedata: function () {
+    console.log("performance it is")
+    return axios.get("/api/data/performance");
+  },
+
+  surveydata: function () {
+     console.log("survey it is");
+    return axios.get("/api/data/survey")
+  },
+};
+
+

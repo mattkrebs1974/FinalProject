@@ -3,6 +3,7 @@ const db = require("../models");
 
 module.exports = {
 
+
   
 gameresults: function (req, res) {
 console.log("usercontroller login", req.body)
@@ -16,6 +17,21 @@ db.performances
  console.log("this is the performance data", dbModel)
  res.send(dbModel)
 
+
+gameresults: function (req, res) {
+console.log("usercontroller login", req.body)
+let user = window.localStorage.getItem();
+console.log("user", user)
+db.performance
+  .findAll({ email: req.body.email })
+
+  .then((dbModel) => {
+
+console.log("these are the matches",dbModel)
+
+res.send(dbModel)
+     
+
   })
   .catch((err) => {
     console.log("error" + err);
@@ -23,14 +39,24 @@ db.performances
   });
 
 
+
+
+
 },
 
 
 surveyresults: function (req, res) {
+
 console.log("usercccc", req.body)
 let user = window.localStorage.getItem();
 console.log("user", user)
 db.surveys
+
+console.log("usercontroller login", req.body)
+let user = window.localStorage.getItem();
+console.log("user", user)
+db.survey
+
   .findAll({ email: req.body.email })
 
   .then((dbModel) => {
