@@ -46,14 +46,19 @@ class trial extends Component {
     event.preventDefault();
     console.log(this.state.selectedOption);
     localStorage.setItem("question1", this.state.selectedOption)
+    localStorage.getItem("question1", this.state.selectedOption)
     console.log(this.state.selectedOption2);
     localStorage.setItem("question2", this.state.selectedOption2 )
+    localStorage.getItem("question2", this.state.selectedOption2)
     console.log(this.state.selectedOption3);
     localStorage.setItem("question3", this.state.selectedOption3 )
+    localStorage.getItem("question3", this.state.selectedOption3 )
     console.log(this.state.selectedOption4);
     localStorage.setItem("question4", this.state.selectedOption4 )
-    console.log(this.state.selectedOption5);
-    localStorage.setItem("question5", this.state.selectedOption5 )
+    localStorage.getItem("question4", this.state.selectedOption4 )
+    // console.log(this.state.selectedOption5);
+    // localStorage.setItem("question5", this.state.selectedOption5 )
+    // localStorage.getItem("question5", this.state.selectedOption5 )
   }
   render() {
     return (
@@ -173,8 +178,8 @@ class trial extends Component {
             <form>
               <div data-role="fieldcontain">
                 <fieldset data-role="controlgroup">
-                  <legend>How hungry/stuffed are you?</legend>
-                  very hungry
+                  <legend>How physically active have you been today?</legend>
+                  sedentary
                   <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
@@ -219,7 +224,7 @@ class trial extends Component {
                     checked={this.state.selectedOption3 === "5"}
                     onChange={this.onValueChange3}
                   />
-                  <label htmlFor="radio-choice-5"> 5 </label> stuffed
+                  <label htmlFor="radio-choice-5"> 5 </label> very active
                 </fieldset>
               </div>
             </form>
@@ -228,8 +233,8 @@ class trial extends Component {
             <form>
               <div data-role="fieldcontain">
                 <fieldset data-role="controlgroup">
-                  <legend>How hungry/stuffed are you?</legend>
-                  very hungry
+                  <legend>How sad or happy do you feel today</legend>
+                  very sad
                   <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
@@ -274,12 +279,12 @@ class trial extends Component {
                     checked={this.state.selectedOption4 === "5"}
                     onChange={this.onValueChange4}
                   />
-                  <label htmlFor="radio-choice-5"> 5 </label> stuffed
+                  <label htmlFor="radio-choice-5"> 5 </label> elated
                 </fieldset>
               </div>
             </form>
           </div>
-          <div>
+          {/* <div>
             <form>
               <div data-role="fieldcontain">
                 <fieldset data-role="controlgroup">
@@ -333,7 +338,7 @@ class trial extends Component {
                 </fieldset>
               </div>
             </form>
-          </div>
+          </div> */}
           <fieldset>
             <div className="bottom">
               <button
