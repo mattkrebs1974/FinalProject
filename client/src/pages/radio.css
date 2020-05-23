@@ -9,7 +9,7 @@ text-align: center;
 margin-top: 20px;
 
 }
-.btn {
+button.btn {
     margin-right: auto;
 color: #167bff;
 border:2px solid #167bff;
