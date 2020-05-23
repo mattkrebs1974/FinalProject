@@ -29,11 +29,11 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(routes);
 
-const dbOptions = {
-useNewUrlParser: true,
-useUnifiedTopology: true,
-useCreateIndex: true
-}
+// const dbOptions = {
+// useNewUrlParser: true,
+// useUnifiedTopology: true,
+// useCreateIndex: true
+// }
 
 // Connect to the mongoose database
 const dbOptions = {
