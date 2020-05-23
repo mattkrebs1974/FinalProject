@@ -1,16 +1,67 @@
 import React, { Component } from "react";
 import Chart from "react-apexcharts";
+import "./scatterline.css";
+
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      options: {
+        chart: {
+          height: 350,
+          type: "line",
+        },
+        fill: {
+          type: "solid",
+        },
+        markers: {
+          size: [6, 0],
+        },
+        tooltip: {
+          shared: false,
+          intersect: true,
+        },
+        legend: {
+          show: true,
+          labels: {
+            colors: "white",
+            useSeriesColors: false,
+          },
+          fontSize: "20",
+        },
+        xaxis: {
+          labels: {
+            style: {
+              fontSize: "15",
+              colors: "white",
+            },
+          },
+
+          type: "numeric",
+          min: 0,
+          max: 5,
+          tickAmount: 5,
+        },
+        yaxis: {
+          labels: {
+            style: {
+              fontSize: "15",
+              colors: "white",
+            },
+          },
+
+          type: "numeric",
+          min: 0,
+
+          tickAmount: 5,
+        },
+      },
       series: [
         {
           name: "Points",
           type: "scatter",
-
           //2.14, 2.15, 3.61, 4.93, 2.4, 2.7, 4.2, 5.4, 6.1, 8.3
           data: [
             {
@@ -68,92 +119,64 @@ class App extends Component {
           ],
         },
         {
+          name: "Current Score",
+          type: "scatter",
+          style: {
+            colors: "red",
+          },
+
+          //2.14, 2.15, 3.61, 4.93, 2.4, 2.7, 4.2, 5.4, 6.1, 8.3
+          data: [
+            {
+              x: 4,
+              y: 4,
+            },
+          ],
+        },
+        {
           name: "Line",
           type: "line",
+
           data: [
             {
               x: 1,
-              y: 2,
+              y: 1,
             },
             {
+              //mean
               x: 2,
               y: 3,
             },
             {
-              x: 3,
-              y: 4,
-            },
-            {
-              x: 4,
-              y: 5,
-            },
-            {
               x: 5,
-              y: 6,
-            },
-            {
-              x: 6,
-              y: 7,
-            },
-            {
-              x: 7,
-              y: 8,
-            },
-            {
-              x: 8,
               y: 9,
+
+              //   slope = 2 -- at 3 +2 +2+2, (5,9)
+              //    slope =2 -- biggest x = 2 that means 3 more (3)(slope)=6 slopes to 5
             },
+            // slope = 2 at 1 -2 =-1
             {
-              x: 9,
-              y: 10,
-            },
-            {
-              x: 10,
-              y: 11,
+              x: 0,
+              y: -1,
             },
           ],
         },
       ],
-      chart: {
-        height: 350,
-        type: "line",
-      },
-      fill: {
-        type: "solid",
-      },
-      markers: {
-        size: [6, 0],
-      },
-      tooltip: {
-        shared: false,
-        intersect: true,
-      },
-      legend: {
-        show: false,
-      },
-      xaxis: {
-        type: "numeric",
-        min: 0,
-        max: 12,
-        tickAmount: 12,
-      },
     };
-
   }
   render() {
     return (
+      <div className = "charts">
       <Chart
+        options={this.state.options}
         series={this.state.series}
-      type ={"scatter"}
-        width={500}
-        height={320}
+       
+        width={"90%"}
+       
       />
+      </div>
     );
   }
 }
 
 export default App;
-
-
-      
-    
