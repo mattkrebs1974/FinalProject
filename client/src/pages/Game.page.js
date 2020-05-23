@@ -23,6 +23,17 @@ function getRandomColor() {
   return color;
 }
 
+//local storage variables
+var email =  window.localStorage.getItem("email");
+var question1 =  window.localStorage.getItem("question1");
+var question2 =  window.localStorage.getItem("question2");
+var question3 =  window.localStorage.getItem("question3");
+var question4 =  window.localStorage.getItem("question4");
+
+
+
+
+
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -35,6 +46,18 @@ export default class Home extends Component {
       userResult: [],
     };
   }
+
+  // loadUsers = () => {
+  //   API.getUsers()
+  //     .then((res) =>
+  //       this.setState({
+  //         email: ""
+  //       })
+  //     )
+  //     .catch((err) => console.log(err));
+  // };
+
+
 
 
 
@@ -60,10 +83,16 @@ export default class Home extends Component {
     console.log("time: ", randoInterval());
 
     if (click === 3) {
-      clearTimeout(timeout);
+      clearTimeout(timeout);  
+      console.log("email:" , email)
       API.gameData({
         score: this.state.score / 3,
         userResult: this.state.userResult,
+        email: email,
+        question1: question1,
+        question2: question2,
+        question3: question3,
+        question4: question4,
       }) 
          .then(function (response) {
           console.log(response);
