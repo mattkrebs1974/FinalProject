@@ -49,7 +49,7 @@ class login extends Component {
             localStorage.setItem("email", email);
             localStorage.setItem("firstname", firstname);
 
-            window.location.href = "/Welcome";
+            window.location.href = "/Chart5";
           }
         })
         .catch((err) => console.log(err));
