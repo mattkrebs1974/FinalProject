@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export default {
+export default  {
   // Saves a user to the database
   saveUser: function (userData) {
     return axios.post("/api/users", userData);
@@ -27,9 +27,10 @@ export default {
     return axios.post("/api/data/performance",data);
   },
 
-  surveydata: function (data) {
-    console.log("survey it is");
-    return axios.post("/api/data/survey",data);
+
+  gameData: function (data) {
+    console.log("Game it is");
+    return axios.post("/api/game",data);
   },
 };
 
