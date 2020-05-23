@@ -65,7 +65,7 @@ class trial extends Component {
                 <fieldset data-role="controlgroup" namee="bob">
                   <legend>How tired/awake are you?</legend>
                   very tired
-                  <input
+                  <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
                     id="radio-choice-1"
@@ -74,7 +74,7 @@ class trial extends Component {
                     onChange={this.onValueChange}
                   />
                   <label htmlFor="radio-choice-1"> 1 </label>
-                  <input
+                  <input className="entrymargin" 
                     type="radio"
                     name="radiochoice1"
                     id="radio-choice-2"
@@ -83,7 +83,7 @@ class trial extends Component {
                     onChange={this.onValueChange}
                   />
                   <label htmlFor="radio-choice-2"> 2 </label>
-                  <input
+                  <input className="entrymargin" 
                     type="radio"
                     name="radiochoice1"
                     id="radio-choice-3"
@@ -92,7 +92,7 @@ class trial extends Component {
                     onChange={this.onValueChange}
                   />
                   <label htmlFor="radio-choice-3"> 3 </label>
-                  <input
+                  <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
                     id="radio-choice-4"
@@ -101,7 +101,7 @@ class trial extends Component {
                     onChange={this.onValueChange}
                   />
                   <label htmlFor="radio-choice-4"> 4 </label>
-                  <input
+                  <input className="entrymargin" 
                     type="radio"
                     name="radiochoice1"
                     id="radio-choice-5"
@@ -120,7 +120,7 @@ class trial extends Component {
                 <fieldset data-role="controlgroup" namee="lola">
                   <legend>How hungry/stuffed are you?</legend>
                   very hungry
-                  <input
+                  <input className="entrymargin"
                     type="radio"
                     name="radiochoice2"
                     id="radio-choice-1"
@@ -129,7 +129,7 @@ class trial extends Component {
                     onChange={this.onValueChange2}
                   />
                   <label htmlFor="radio-choice-1"> 1 </label>
-                  <input
+                  <input className="entrymargin"
                     type="radio"
                     name="radiochoice2"
                     id="radio-choice-2"
@@ -138,7 +138,7 @@ class trial extends Component {
                     onChange={this.onValueChange2}
                   />
                   <label htmlFor="radio-choice-2"> 2 </label>
-                  <input
+                  <input className="entrymargin"
                     type="radio"
                     name="radiochoice2"
                     id="radio-choice-3"
@@ -147,7 +147,7 @@ class trial extends Component {
                     onChange={this.onValueChange2}
                   />
                   <label htmlFor="radio-choice-3"> 3 </label>
-                  <input
+                  <input className="entrymargin"
                     type="radio"
                     name="radiochoice2"
                     id="radio-choice-4"
@@ -156,7 +156,7 @@ class trial extends Component {
                     onChange={this.onValueChange2}
                   />
                   <label htmlFor="radio-choice-4"> 4 </label>
-                  <input
+                  <input className="entrymargin"
                     type="radio"
                     name="radiochoice2"
                     id="radio-choice-5"
@@ -175,7 +175,7 @@ class trial extends Component {
                 <fieldset data-role="controlgroup">
                   <legend>How hungry/stuffed are you?</legend>
                   very hungry
-                  <input
+                  <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
                     id="radio-choice-1"
@@ -184,7 +184,7 @@ class trial extends Component {
                     onChange={this.onValueChange3}
                   />
                   <label htmlFor="radio-choice-1"> 1 </label>
-                  <input
+                  <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
                     id="radio-choice-2"
@@ -193,7 +193,7 @@ class trial extends Component {
                     onChange={this.onValueChange3}
                   />
                   <label htmlFor="radio-choice-2"> 2 </label>
-                  <input
+                  <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
                     id="radio-choice-3"
@@ -202,7 +202,7 @@ class trial extends Component {
                     onChange={this.onValueChange3}
                   />
                   <label htmlFor="radio-choice-3"> 3 </label>
-                  <input
+                  <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
                     id="radio-choice-4"
@@ -211,7 +211,7 @@ class trial extends Component {
                     onChange={this.onValueChange3}
                   />
                   <label htmlFor="radio-choice-4"> 4 </label>
-                  <input
+                  <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
                     id="radio-choice-5"
@@ -230,7 +230,7 @@ class trial extends Component {
                 <fieldset data-role="controlgroup">
                   <legend>How hungry/stuffed are you?</legend>
                   very hungry
-                  <input
+                  <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
                     id="radio-choice-1"
@@ -239,7 +239,7 @@ class trial extends Component {
                     onChange={this.onValueChange4}
                   />
                   <label htmlFor="radio-choice-1"> 1 </label>
-                  <input
+                  <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
                     id="radio-choice-2"
@@ -248,7 +248,7 @@ class trial extends Component {
                     onChange={this.onValueChange4}
                   />
                   <label htmlFor="radio-choice-2"> 2 </label>
-                  <input
+                  <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
                     id="radio-choice-3"
@@ -257,7 +257,7 @@ class trial extends Component {
                     onChange={this.onValueChange4}
                   />
                   <label htmlFor="radio-choice-3"> 3 </label>
-                  <input
+                  <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
                     id="radio-choice-4"
@@ -266,7 +266,7 @@ class trial extends Component {
                     onChange={this.onValueChange4}
                   />
                   <label htmlFor="radio-choice-4"> 4 </label>
-                  <input
+                  <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
                     id="radio-choice-5"
@@ -285,7 +285,7 @@ class trial extends Component {
                 <fieldset data-role="controlgroup">
                   <legend>How hungry/stuffed are you?</legend>
                   very hungry
-                  <input
+                  <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
                     id="radio-choice-1"
@@ -294,7 +294,7 @@ class trial extends Component {
                     onChange={this.onValueChange5}
                   />
                   <label htmlFor="radio-choice-1"> 1 </label>
-                  <input
+                  <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
                     id="radio-choice-2"
@@ -303,7 +303,7 @@ class trial extends Component {
                     onChange={this.onValueChange5}
                   />
                   <label htmlFor="radio-choice-2"> 2 </label>
-                  <input
+                  <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
                     id="radio-choice-3"
@@ -312,7 +312,7 @@ class trial extends Component {
                     onChange={this.onValueChange5}
                   />
                   <label htmlFor="radio-choice-3"> 3 </label>
-                  <input
+                  <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
                     id="radio-choice-4"
@@ -321,7 +321,7 @@ class trial extends Component {
                     onChange={this.onValueChange5}
                   />
                   <label htmlFor="radio-choice-4"> 4 </label>
-                  <input
+                  <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
                     id="radio-choice-5"

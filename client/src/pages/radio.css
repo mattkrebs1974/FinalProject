@@ -1,4 +1,4 @@
-input {
+input.entrymargin {
 
 margin-left: 2vw;
 margin-right: 1vw;
@@ -9,12 +9,11 @@ text-align: center;
 margin-top: 20px;
 
 }
-.btn {
+button.btn {
     margin-right: auto;
 color: #167bff;
 border:2px solid #167bff;
 
-
-
 }
+
 
