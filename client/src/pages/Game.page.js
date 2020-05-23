@@ -1,10 +1,6 @@
 import React, { Component } from "react";
-import axios from "axios";
 import "./game.css";
 import API from "../util/API";
-
-
-var counter = 0;
 
 
 
@@ -12,12 +8,12 @@ var click = 0;
 function rando() {
   return Math.floor(Math.random() * 375) + 200;
 }
+
 function randoInterval() {
   return Math.floor(Math.random() * 4000) + 500;
-
-
 }
-console.log("don't worry" + counter);
+
+// A function used later to change the color of the box
 function getRandomColor() {
   var letters = "0123456789ABCDEF".split("");
   var color = "#";
@@ -26,6 +22,17 @@ function getRandomColor() {
   } //ends for loop
   return color;
 }
+
+//local storage variables
+var email =  window.localStorage.getItem("email");
+var question1 =  window.localStorage.getItem("question1");
+var question2 =  window.localStorage.getItem("question2");
+var question3 =  window.localStorage.getItem("question3");
+var question4 =  window.localStorage.getItem("question4");
+
+
+
+
 
 export default class Home extends Component {
   constructor(props) {
@@ -39,6 +46,20 @@ export default class Home extends Component {
       userResult: [],
     };
   }
+
+  // loadUsers = () => {
+  //   API.getUsers()
+  //     .then((res) =>
+  //       this.setState({
+  //         email: ""
+  //       })
+  //     )
+  //     .catch((err) => console.log(err));
+  // };
+
+
+
+
 
   move() {
     var temparray = this.state.userResult;
@@ -61,14 +82,19 @@ export default class Home extends Component {
 
     console.log("time: ", randoInterval());
 
-    if (click === 8) {
-      clearTimeout(timeout);
-      axios
-        .post("/api/score", {
-          score: this.state.score / 8,
-          userResult: this.state.userResult,
-        })
-        .then(function (response) {
+    if (click === 3) {
+      clearTimeout(timeout);  
+      console.log("email:" , email)
+      API.gameData({
+        score: this.state.score / 3,
+        userResult: this.state.userResult,
+        email: email,
+        question1: question1,
+        question2: question2,
+        question3: question3,
+        question4: question4,
+      }) 
+         .then(function (response) {
           console.log(response);
         })
         .catch(function (error) {
@@ -84,17 +110,7 @@ export default class Home extends Component {
     });
   }
 
-  gotoresults = () => {
-    console.log("we found something");
 
-    API.performancedata({}).then((res) => {
-      console.log(res, "adsfaafasfa");
-
-      API.surveydata({}).then((res) => {
-        console.log(res, "adsfaafasfa");
-      });
-    });
-  };
 
   render() {
     console.log("x:", this.state.x);
@@ -125,11 +141,10 @@ export default class Home extends Component {
             } seconds{" "}
           </h1>
           <h2>your composite score: {this.state.score} seconds</h2>
-          {click === 1 ? (
+          {click === 3 ? (
             <a href="http://localhost:3000/Results" alt="description of image">
               {" "}
               <img
-                onClick={this.gotoresults}
                 id="resultspage"
                 src="https://www.freepnglogos.com/uploads/button-png/red-button-circle-image-pixabay-20.png"
                 alt="description of imag"
@@ -137,7 +152,7 @@ export default class Home extends Component {
               />{" "}
             </a>
           ) : null}
-          {click === 8 ? (
+          {click === 3 ? (
             <h1> Please select giant red button to see your results! </h1>
           ) : null}
         </div>
