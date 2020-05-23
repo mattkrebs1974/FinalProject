@@ -45,10 +45,15 @@ class trial extends Component {
   formSubmit(event) {
     event.preventDefault();
     console.log(this.state.selectedOption);
+    localStorage.setItem("question1", this.state.selectedOption)
     console.log(this.state.selectedOption2);
+    localStorage.setItem("question2", this.state.selectedOption2 )
     console.log(this.state.selectedOption3);
+    localStorage.setItem("question3", this.state.selectedOption3 )
     console.log(this.state.selectedOption4);
+    localStorage.setItem("question4", this.state.selectedOption4 )
     console.log(this.state.selectedOption5);
+    localStorage.setItem("question5", this.state.selectedOption5 )
   }
   render() {
     return (
