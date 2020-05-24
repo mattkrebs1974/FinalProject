@@ -77,7 +77,7 @@ class App extends Component {
               x: 1.2,
               y: 2.19,
             },
-           
+
             {
               x: 1.8,
               y: 2.43,
@@ -172,29 +172,33 @@ class App extends Component {
     };
   }
 
+ 
   componentDidMount() {
-    console.log("Chart Component DID MOUNT!", this.state.series[0].data);
+    console.log("Chart Component DID MOUNT!");
     const findemail = window.localStorage.getItem("email");
+    let dataArray = [];
     API.performancedata({ email: findemail })
       .then((res) => {
-        //  this.setState({
-        //    email: "",
-        //  })
-
         for (let i = 0; i < res.data.length; i++) {
-
-
           let newObject = {};
           newObject.x = res.data[i].score;
           newObject.y = res.data[i].question1;
-        
-          this.state.series[0].data.push(newObject);
-          console.log(newObject, "data");
-
-         
-
+          dataArray.push(newObject);
         }
-       
+        this.setState(
+          {
+            options: {
+              ...this.state.options,
+            },
+            series: [
+              {
+                ...this.state.series.data,
+                data: dataArray,
+              },
+            ],
+          },
+          () => console.log(this.state)
+        );
       })
       .catch((err) => console.log(err));
   }
