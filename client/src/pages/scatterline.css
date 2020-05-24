@@ -1,6 +1,21 @@
+
 .charts {
 margin: 70px auto;
+margin-top: 10%;
 overflow: hidden;
-width: 90%;
+width: 100%;
 text-align: center;
+min-width: 450px;
+}
+div.auth-inner {
+
+padding: 10%;
+padding-top:0px;
+    margin-top: 175px;
+
+    max-width: 900px;
+}
+foreignobject {
+
+margin-right: 100px;
 }
