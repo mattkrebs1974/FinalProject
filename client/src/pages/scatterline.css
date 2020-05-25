@@ -1,6 +1,36 @@
+
 .charts {
 margin: 70px auto;
+margin-top: 10%;
 overflow: hidden;
-width: 90%;
+width: 100%;
 text-align: center;
+min-width: 450px;
+}
+div.auth-inner {
+
+padding: 10%;
+padding-top:0px;
+    margin-top: 175px;
+
+    max-width: 900px;
+}
+
+.animal {
+
+margin-top:50px;
+
+}
+.title2 {
+
+margin-top: -5%;
+text-align: center;
+font-size: 30px;
+text-shadow: .5px .5px #FFF;
+color: #167bff;
+}
+.title2:hover {
+
+text-shadow: 1.2px 1.2px #FFF;
+
 }

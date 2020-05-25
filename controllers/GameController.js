@@ -5,7 +5,7 @@ module.exports = {
       console.log("working");
       console.log(req.body);
       let scores = req.body;
-      db.score
+      db.scores
       .create(scores)
       .then((dbModel)=>{
          res.json(dbModel);

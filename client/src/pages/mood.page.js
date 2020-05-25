@@ -9,6 +9,11 @@ class App extends Component {
 
     this.state = {
       options: {
+        grid: {
+          padding: {
+            left: 10,
+          },
+        },
         chart: {
           height: 350,
           type: "line",
@@ -64,11 +69,11 @@ class App extends Component {
           },
 
           type: "numeric",
-          min: 1,
+          min: 0,
           max: 5,
-          tickAmount: 4,
+          tickAmount: 5,
           title: {
-            text: "1.0 = Very Tired; 5.0 = Wide Awake",
+            text: "1.0 = Very Sad; 5.0 = Elated",
             style: {
               color: "#FFF",
               fontSize: "20",
@@ -109,8 +114,7 @@ class App extends Component {
     };
   }
 
-
-componentDidMount() {
+  componentDidMount() {
     console.log("Chart Component DID MOUNT!");
     const findemail = window.localStorage.getItem("email");
     let dataArray = [];
@@ -118,20 +122,25 @@ componentDidMount() {
       .then((res) => {
         for (let i = 0; i < res.data.length; i++) {
           let newObject = {};
-          newObject.x = res.data[i].question1;
-            newObject.y = res.data[i].score;
-         
-          dataArray.push(newObject)
+          newObject.x = res.data[i].question4;
+          newObject.y = res.data[i].score;
+
+          dataArray.push(newObject);
         }
-        this.setState({
-          options: {
-            ...this.state.options
+        this.setState(
+          {
+            options: {
+              ...this.state.options,
+            },
+            series: [
+              {
+                ...this.state.series.data,
+                data: dataArray,
+              },
+            ],
           },
-          series: [{
-            ...this.state.series.data,
-            data: dataArray
-          }]
-        }, () => console.log(this.state))
+          () => console.log(this.state)
+        );
       })
       .catch((err) => console.log(err));
   }
@@ -139,10 +148,10 @@ componentDidMount() {
   render() {
     return (
       <div>
-        <div className="title">
-          Your "Sleepiness" <br></br>
+        <div className="title2">
+          How "Happy" You Are
           <br></br>vs.<br></br>
-          <br></br> Your "Reaction Time"<br></br>
+          Your "Reaction Time"<br></br>
         </div>
         <div className="charts">
           <Chart
@@ -157,6 +166,3 @@ componentDidMount() {
 }
 
 export default App;
-
-      
-    

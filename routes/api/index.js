@@ -10,14 +10,6 @@ router.use("/data", resultsRoutes);
 
 router.use("/game", gameResults);
 
-
-
-
-
-router.use("/data", resultsRoutes);
-
-router.use("/users", userRoutes);
-
 // router.post("/score", function (req, res) {
 //   console.log(Score);
 //   console.log(req.body)
