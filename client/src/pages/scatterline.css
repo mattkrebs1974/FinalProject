@@ -15,7 +15,22 @@ padding-top:0px;
 
     max-width: 900px;
 }
-foreignobject {
 
-margin-right: 100px;
+.animal {
+
+margin-top:50px;
+
+}
+.title2 {
+
+margin-top: -5%;
+text-align: center;
+font-size: 30px;
+text-shadow: .5px .5px #FFF;
+color: #167bff;
+}
+.title2:hover {
+
+text-shadow: 1.2px 1.2px #FFF;
+
 }

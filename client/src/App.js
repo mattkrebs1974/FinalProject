@@ -11,16 +11,16 @@ import Welcome from "./pages/Welcome.page"
 import Form from "../src/pages/Form.page"
 
 
-import Results from "./pages/linegraph.page";
-import Chart2 from "./pages/areagraph.page";
-import Chart3 from "./pages/histogram.page";
-import Chart4 from "./pages/scatter.page";
 
-import Chart5 from "./pages/scatterline.page";
+
 
 import results from "./pages/results.page";
 
 import Instructions from "./pages/Instructions.page";
+import Sleep from "./pages/sleep.page";
+import Hunger from "./pages/hunger.page";
+import Mood from "./pages/mood.page";
+import Exercise from "./pages/exercise.page";
 
 
 
@@ -78,21 +78,13 @@ function App() {
               <Route path="/sign-up" component={SignUp} />
               <Route path="/Game" component={GameOne} />
               <Route path="/Welcome" component={Welcome} />
-
               <Route path="/Form" component={Form} />
-             
-
-              <Route path="/Results" component={Results} />
-              <Route path="/Chart2" component={Chart2} />
-              <Route path="/Chart3" component={Chart3} />
-              <Route path="/Chart4" component={Chart4} />
-
-              <Route path="/Chart5" component={Chart5} />
-
+              <Route path="/Sleep" component={Sleep} />
+              <Route path="/Hunger" component={Hunger} />
+              <Route path="/Mood" component={Mood} />
+              <Route path="/Exercise" component={Exercise} />
               <Route path="/results" component={results} />
-
               <Route path="/Instructions" component={Instructions} />
-
             </Switch>
           </div>
         </div>
