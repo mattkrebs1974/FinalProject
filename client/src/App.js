@@ -4,6 +4,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
+
 import Login from "./pages/login.page";
 import SignUp from "./pages/signup.page";
 import Home from "./pages/home.page";
@@ -11,14 +12,16 @@ import Home from "./pages/home.page";
 import GameOne from "./pages/Game.page"
 import Welcome from "./pages/Welcome.page"
 import Form from "../src/pages/Form.page"
+<<<<<<< HEAD
+=======
 
 
 
 
 
 
+>>>>>>> master
 import results from "./pages/results.page";
-
 import Instructions from "./pages/Instructions.page";
 import Sleep from "./pages/sleep.page";
 import Hunger from "./pages/hunger.page";
@@ -32,13 +35,15 @@ import Navbar from "./pages/navbar.page";
 
 
 
+
 function App() {
   return (
     <div className="App">
-      < Navbar />
+      <Navbar />
+   
       <Router>
         <div className="auth-wrapper">
-          <div className="auth-inner">
+          <div className="resultscontainer">
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/sign-in" component={Login} />

@@ -27,6 +27,7 @@ body, html, .App, #root, .auth-wrapper {
 }
 
 .auth-wrapper {
+
   margin-top: 40px;
   display: flex;
   justify-content: center;
@@ -37,7 +38,7 @@ body, html, .App, #root, .auth-wrapper {
 .auth-inner {
   color: white;
   width: 95vw;
-  margin-top: 0px;
+  margin-top: 15%;
   margin-left:auto;
   margin-right: auto;
   background: black;;

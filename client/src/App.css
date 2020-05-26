@@ -15,6 +15,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: black;
+
 }
 
 .App-link {
@@ -33,10 +34,15 @@ display:block;
 
 .title {
 
-  font-size: 8vw;
+ font-size:8vw;
   text-align: center;
   line-height: 20px;
+
   margin-top: -150px;
+
+  
+}
+
 }
 @media only screen and (min-width: 900px) {
   div.title {
@@ -64,3 +70,4 @@ display:block;
   width: 350px
  
 }
+
