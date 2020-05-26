@@ -56,6 +56,7 @@ class trial extends Component {
     console.log(this.state.selectedOption4);
     localStorage.setItem("question4", this.state.selectedOption4 )
     localStorage.getItem("question4", this.state.selectedOption4 )
+    window.location.href = "/Game"
     // console.log(this.state.selectedOption5);
     // localStorage.setItem("question5", this.state.selectedOption5 )
     // localStorage.getItem("question5", this.state.selectedOption5 )
@@ -341,13 +342,14 @@ class trial extends Component {
           </div> */}
           <fieldset>
             <div className="bottom">
-              <button
+            <button
                 className="btn btn-default"
                 type="submit"
                 onClick={this.formSubmit}
               >
                 Submit
               </button>
+            
             </div>
           </fieldset>
         </form>

@@ -82,6 +82,10 @@ export default class Home extends Component {
 
     console.log("time: ", randoInterval());
 
+    var num = this.state.score / 3
+    var SuperNumber = num.toFixed(2)
+    console.log(SuperNumber);    
+
     if (click === 3) {
       clearTimeout(timeout);  
       console.log("email:" , email)
