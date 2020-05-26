@@ -7,6 +7,7 @@ width: 100%;
 text-align: center;
 min-width: 450px;
 }
+
 /* div.auth-inner {
 
 padding: 10%;
@@ -16,6 +17,7 @@ padding-top:0px;
     max-width: 900px;
 } */
 
+
 .animal {
 
 margin-top:50px;
@@ -23,7 +25,7 @@ margin-top:50px;
 }
 .title2 {
 
-margin-top: -5%;
+margin-top: 5%;
 text-align: center;
 font-size: 30px;
 text-shadow: .5px .5px #FFF;
@@ -32,5 +34,17 @@ color: #167bff;
 .title2:hover {
 
 text-shadow: 1.2px 1.2px #FFF;
+
+}
+
+.resultscontainer {
+margin-left: auto;
+margin-right:auto;
+padding: 10%;
+padding-top:0px;
+    margin-top: 175px;
+
+    max-width: 900px;
+   
 
 }
