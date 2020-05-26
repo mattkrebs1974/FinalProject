@@ -3,8 +3,6 @@ import Chart from "react-apexcharts";
 import "./scatterline.css";
 import API from "../util/API";
 
-
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -63,6 +61,18 @@ class App extends Component {
           fontSize: "20",
         },
         xaxis: {
+
+            x: new Date('14 Nov 2012').getTime(),
+            borderColor: '#999',
+            yAxisIndex: 0,
+            label: {
+              show: true,
+              text: 'Rally',
+              style: {
+                color: "#fff",
+                background: '#775DD0'
+              }
+            },
           labels: {
             style: {
               fontSize: "15",
@@ -75,7 +85,7 @@ class App extends Component {
           max: 5,
           tickAmount: 5,
           title: {
-            text: "1.0 = Very Tired; 5.0 = Wide Awake",
+            text: "Time of Day",
             style: {
               color: "#FFF",
               fontSize: "20",
@@ -124,10 +134,11 @@ class App extends Component {
       .then((res) => {
         for (let i = 0; i < res.data.length; i++) {
           let newObject = {};
-          newObject.x = res.data[i].question1;
+          newObject.x = res.data[i].date;
           newObject.y = res.data[i].score;
 
           dataArray.push(newObject);
+          console.log("this is the time data", dataArray)
         }
         this.setState(
           {
@@ -150,9 +161,8 @@ class App extends Component {
   render() {
     return (
       <div>
-    
         <div className="title2">
-          Your "Sleepiness"
+          Time of Day
           <br></br>vs.<br></br>
           Your "Reaction Time"<br></br>
         </div>
