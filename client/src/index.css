@@ -27,11 +27,13 @@ body, html, .App, #root, .auth-wrapper {
 }
 
 .auth-wrapper {
-  margin-top: -40px;
+  margin-top: -85px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: left;
+  padding: 50px;
+  color: white;
 }
 
 .auth-inner {

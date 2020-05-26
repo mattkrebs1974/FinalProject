@@ -4,6 +4,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
+
 import Login from "./pages/login.page";
 import SignUp from "./pages/signup.page";
 import Home from "./pages/home.page";
@@ -32,13 +33,15 @@ import Navbar from "./pages/navbar.page";
 
 
 
+
 function App() {
   return (
     <div className="App">
-      < Navbar />
+      <Navbar />
+   
       <Router>
         <div className="auth-wrapper">
-          <div className="auth-inner">
+          <div className="resultscontainer">
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/sign-in" component={Login} />
