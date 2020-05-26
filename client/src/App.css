@@ -34,21 +34,24 @@ display:block;
 
 .title {
 
- 
+ font-size:8vw;
   text-align: center;
   line-height: 20px;
+
+  margin-top: -150px;
+
   
 }
 
-div.title {
-margin-left: auto;
-margin-right:auto;
-overflow-x: inherit;
- font-size: 73px;
- 
-
-
 }
+@media only screen and (min-width: 900px) {
+  div.title {
+      font-size: 70px;
+      margin-top: 50px;
+  }
+}
+
+
 
 .enter a {
 
@@ -68,22 +71,3 @@ overflow-x: inherit;
  
 }
 
-.resultscontainer {
-margin-left: auto;
-margin-right:auto;
-padding: 10%;
-padding-top:0px;
-    margin-top: 175px;
-
-    max-width: 1000px;
-    margin:0;
-    padding:0;
-    width: 400px;
-   
-
-}
-
-div.resultscontainer {
-
-  padding: 0;
-}
