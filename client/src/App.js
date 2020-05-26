@@ -12,15 +12,6 @@ import Home from "./pages/home.page";
 import GameOne from "./pages/Game.page"
 import Welcome from "./pages/Welcome.page"
 import Form from "../src/pages/Form.page"
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
->>>>>>> master
 import results from "./pages/results.page";
 import Instructions from "./pages/Instructions.page";
 import Sleep from "./pages/sleep.page";

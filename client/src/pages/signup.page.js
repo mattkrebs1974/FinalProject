@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../util/API";
+import "./form.css";
 
 
 // import { Link } from "react-router-dom";
