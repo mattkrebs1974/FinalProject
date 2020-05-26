@@ -11,7 +11,7 @@ div.auth-inner {
 
 padding: 10%;
 padding-top:0px;
-    margin-top: 175px;
+    margin-top: 20px;
 
     max-width: 900px;
 }
@@ -33,4 +33,16 @@ color: #167bff;
 
 text-shadow: 1.2px 1.2px #FFF;
 
+}
+
+@media only screen and (min-width: 800px) {
+  div.title2 {
+  
+    margin-top: 15%;
+text-align: center;
+font-size: 30px;
+text-shadow: .5px .5px #FFF;
+color: #167bff;
+
+  }
 }

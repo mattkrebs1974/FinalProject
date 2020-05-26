@@ -28,9 +28,9 @@ export default class Home extends Component {
                          responsiveness and tells you when you are at your best.{" "}
                        </div>
                        <div className="enter forgot-password text-right">
-                         <a href="/sign-in">Enter Here</a>
+                        
                          <br />
-                         <a href="/Game">Try Game</a>
+                      
                        </div>
                      </div>
                    );

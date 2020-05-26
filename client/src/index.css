@@ -27,7 +27,7 @@ body, html, .App, #root, .auth-wrapper {
 }
 
 .auth-wrapper {
-  margin-top: -40px;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   flex-direction: column;
