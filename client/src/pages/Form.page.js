@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-
 import "./radio.css";
+import "./form2.css"
 
 class trial extends Component {
   constructor() {
