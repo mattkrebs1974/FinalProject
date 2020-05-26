@@ -58,7 +58,6 @@ function App() {
             </ul>
           </div>
         </nav>
-
         <div className="auth-wrapper">
           <div className="auth-inner">
             <Switch>
