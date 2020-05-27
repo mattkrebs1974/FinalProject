@@ -15,10 +15,10 @@ class results extends Component {
 <>
 <h4> Thank you for participating in Brain SHmer. The results of your quiz have been scaled to questionare you took earlier. Please click on one of the buttons to see how  your game performance correlated with your health  </h4>
 
-<a href="http://localhost:3000/Sleep"><button>Sleep</button></a>
-<a href="http://localhost:3000/Mood"><button> Mood</button></a>
-<a href="http://localhost:3000/Hunger"><button> Hunger</button></a>
-<a href="http://localhost:3000/Exersise"><button> Exersise</button></a>
+<a href="/Sleep"><button>Sleep</button></a>
+<a href="/Mood"><button> Mood</button></a>
+<a href="/Hunger"><button> Hunger</button></a>
+<a href="/Exersise"><button> Exersise</button></a>
 
 
 </>      

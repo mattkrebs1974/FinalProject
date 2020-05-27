@@ -24,11 +24,11 @@ function getRandomColor() {
 }
 
 //local storage variables
-var email =  window.localStorage.getItem("email");
-var question1 =  window.localStorage.getItem("question1");
-var question2 =  window.localStorage.getItem("question2");
-var question3 =  window.localStorage.getItem("question3");
-var question4 =  window.localStorage.getItem("question4");
+var email = window.localStorage.getItem("email");
+var question1 = window.localStorage.getItem("question1");
+var question2 = window.localStorage.getItem("question2");
+var question3 = window.localStorage.getItem("question3");
+var question4 = window.localStorage.getItem("question4");
 
 
 
@@ -84,13 +84,13 @@ export default class Home extends Component {
 
     console.log("time: ", randoInterval());
 
-    var num = this.state.score/8
+    var num = this.state.score / 8
     var SuperNumber = num.toFixed(2)
-    console.log("Your score",SuperNumber);    
+    console.log("Your score", SuperNumber);
 
     if (click === 8) {
-      clearTimeout(timeout);  
-      console.log("email:" , email)
+      clearTimeout(timeout);
+      console.log("email:", email)
       API.gameData({
         score: SuperNumber,
         userResult: this.state.userResult,
@@ -99,8 +99,8 @@ export default class Home extends Component {
         question2: question2,
         question3: question3,
         question4: question4,
-      }) 
-         .then(function (response) {
+      })
+        .then(function (response) {
           console.log(response);
         })
         .catch(function (error) {
@@ -143,24 +143,24 @@ export default class Home extends Component {
             {" "}
             Your reaction speed:{" "}
             {
-              !!this.state.userResult[this.state.userResult.length - 1] ? 
-              this.state.userResult[this.state.userResult.length - 1].toFixed(2) :
-              null
+              !!this.state.userResult[this.state.userResult.length - 1] ?
+                this.state.userResult[this.state.userResult.length - 1].toFixed(2) :
+                null
             } seconds{" "}
           </h1>
           <h2>your composite score: {this.state.score.toFixed(2)} seconds</h2>
           {click === 8 ? (
             <>
-            <a href="http://localhost:3000/Results" alt="description of image">
-              {" "}
-              <img
-                id="resultspage"
-                src="https://www.freepnglogos.com/uploads/button-png/red-button-circle-image-pixabay-20.png"
-                alt="description of imag"
-                style={{ width: 400, height: 400 }}
-              />{" "}
-            </a>
-            <h2> Please select giant red button to see your results! </h2>
+              <a href="/Results" alt="description of image">
+                {" "}
+                <img
+                  id="resultspage"
+                  src="https://www.freepnglogos.com/uploads/button-png/red-button-circle-image-pixabay-20.png"
+                  alt="description of image"
+                  style={{ width: 400, height: 400 }}
+                />{" "}
+              </a>
+              <h2> Please select giant red button to see your results! </h2>
             </>
           ) : null}
         </div>
