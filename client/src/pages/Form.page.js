@@ -79,7 +79,7 @@ class trial extends Component {
                     checked={this.state.selectedOption === "1"}
                     onChange={this.onValueChange}
                   />
-                  <label htmlFor="radio-choice-1"> 1 </label>
+                  <a htmlFor="radio-choice-1"> 1 </a>
                   <input className="entrymargin" 
                     type="radio"
                     name="radiochoice1"
@@ -88,7 +88,7 @@ class trial extends Component {
                     checked={this.state.selectedOption === "2"}
                     onChange={this.onValueChange}
                   />
-                  <label htmlFor="radio-choice-2"> 2 </label>
+                  <a htmlFor="radio-choice-2"> 2 </a>
                   <input className="entrymargin" 
                     type="radio"
                     name="radiochoice1"
@@ -97,7 +97,7 @@ class trial extends Component {
                     checked={this.state.selectedOption === "3"}
                     onChange={this.onValueChange}
                   />
-                  <label htmlFor="radio-choice-3"> 3 </label>
+                  <a htmlFor="radio-choice-3"> 3 </a>
                   <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
@@ -106,7 +106,7 @@ class trial extends Component {
                     checked={this.state.selectedOption === "4"}
                     onChange={this.onValueChange}
                   />
-                  <label htmlFor="radio-choice-4"> 4 </label>
+                  <a htmlFor="radio-choice-4"> 4 </a>
                   <input className="entrymargin" 
                     type="radio"
                     name="radiochoice1"
@@ -115,7 +115,7 @@ class trial extends Component {
                     checked={this.state.selectedOption === "5"}
                     onChange={this.onValueChange}
                   />
-                  <label htmlFor="radio-choice-5"> 5 </label> wide awake
+                  <a htmlFor="radio-choice-5"> 5 </a> wide awake
                 </fieldset>
               </div>
             </form>
@@ -134,7 +134,7 @@ class trial extends Component {
                     checked={this.state.selectedOption2 === "1"}
                     onChange={this.onValueChange2}
                   />
-                  <label htmlFor="radio-choice-1"> 1 </label>
+                  <a htmlFor="radio-choice-1"> 1 </a>
                   <input className="entrymargin"
                     type="radio"
                     name="radiochoice2"
@@ -143,7 +143,7 @@ class trial extends Component {
                     checked={this.state.selectedOption2 === "2"}
                     onChange={this.onValueChange2}
                   />
-                  <label htmlFor="radio-choice-2"> 2 </label>
+                  <a htmlFor="radio-choice-2"> 2 </a>
                   <input className="entrymargin"
                     type="radio"
                     name="radiochoice2"
@@ -152,7 +152,7 @@ class trial extends Component {
                     checked={this.state.selectedOption2 === "3"}
                     onChange={this.onValueChange2}
                   />
-                  <label htmlFor="radio-choice-3"> 3 </label>
+                  <a htmlFor="radio-choice-3"> 3 </a>
                   <input className="entrymargin"
                     type="radio"
                     name="radiochoice2"
@@ -161,7 +161,7 @@ class trial extends Component {
                     checked={this.state.selectedOption2 === "4"}
                     onChange={this.onValueChange2}
                   />
-                  <label htmlFor="radio-choice-4"> 4 </label>
+                  <a htmlFor="radio-choice-4"> 4 </a>
                   <input className="entrymargin"
                     type="radio"
                     name="radiochoice2"
@@ -170,7 +170,7 @@ class trial extends Component {
                     checked={this.state.selectedOption2 === "5"}
                     onChange={this.onValueChange2}
                   />
-                  <label htmlFor="radio-choice-5"> 5 </label> stuffed
+                  <a htmlFor="radio-choice-5"> 5 </a> stuffed
                 </fieldset>
               </div>
             </form>
@@ -189,7 +189,7 @@ class trial extends Component {
                     checked={this.state.selectedOption3 === "1"}
                     onChange={this.onValueChange3}
                   />
-                  <label htmlFor="radio-choice-1"> 1 </label>
+                  <a htmlFor="radio-choice-1"> 1 </a>
                   <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
@@ -198,7 +198,7 @@ class trial extends Component {
                     checked={this.state.selectedOption3 === "2"}
                     onChange={this.onValueChange3}
                   />
-                  <label htmlFor="radio-choice-2"> 2 </label>
+                  <a htmlFor="radio-choice-2"> 2 </a>
                   <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
@@ -207,7 +207,7 @@ class trial extends Component {
                     checked={this.state.selectedOption3 === "3"}
                     onChange={this.onValueChange3}
                   />
-                  <label htmlFor="radio-choice-3"> 3 </label>
+                  <a htmlFor="radio-choice-3"> 3 </a>
                   <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
@@ -216,7 +216,7 @@ class trial extends Component {
                     checked={this.state.selectedOption3 === "4"}
                     onChange={this.onValueChange3}
                   />
-                  <label htmlFor="radio-choice-4"> 4 </label>
+                  <a htmlFor="radio-choice-4"> 4 </a>
                   <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
@@ -225,7 +225,7 @@ class trial extends Component {
                     checked={this.state.selectedOption3 === "5"}
                     onChange={this.onValueChange3}
                   />
-                  <label htmlFor="radio-choice-5"> 5 </label> very active
+                  <a htmlFor="radio-choice-5"> 5 </a> very active
                 </fieldset>
               </div>
             </form>
@@ -244,7 +244,7 @@ class trial extends Component {
                     checked={this.state.selectedOption4 === "1"}
                     onChange={this.onValueChange4}
                   />
-                  <label htmlFor="radio-choice-1"> 1 </label>
+                  <a htmlFor="radio-choice-1"> 1 </a>
                   <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
@@ -253,7 +253,7 @@ class trial extends Component {
                     checked={this.state.selectedOption4 === "2"}
                     onChange={this.onValueChange4}
                   />
-                  <label htmlFor="radio-choice-2"> 2 </label>
+                  <a htmlFor="radio-choice-2"> 2 </a>
                   <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
@@ -262,7 +262,7 @@ class trial extends Component {
                     checked={this.state.selectedOption4 === "3"}
                     onChange={this.onValueChange4}
                   />
-                  <label htmlFor="radio-choice-3"> 3 </label>
+                  <a htmlFor="radio-choice-3"> 3 </a>
                   <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
@@ -271,7 +271,7 @@ class trial extends Component {
                     checked={this.state.selectedOption4 === "4"}
                     onChange={this.onValueChange4}
                   />
-                  <label htmlFor="radio-choice-4"> 4 </label>
+                  <a htmlFor="radio-choice-4"> 4 </a>
                   <input className="entrymargin"
                     type="radio"
                     name="radiochoice1"
@@ -280,7 +280,7 @@ class trial extends Component {
                     checked={this.state.selectedOption4 === "5"}
                     onChange={this.onValueChange4}
                   />
-                  <label htmlFor="radio-choice-5"> 5 </label> elated
+                  <a htmlFor="radio-choice-5"> 5 </a> elated
                 </fieldset>
               </div>
             </form>
