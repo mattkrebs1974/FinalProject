@@ -7,14 +7,30 @@ html{
 
 }
 
-div.resultscontaine{
+h1{
+    color: red;
+}
+
+div.resultscontainer{
 /* margin-left: 100px; */
 text-align: center;
 }
 
-.instruct{
-    float:left
-}
-.result{
-    float: right;
-}
+  
+  .column {
+      margin-left: 230px;
+    float: left;
+    /* width: 33.33%; */
+  
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+ .photo{
+    border-radius: 50%;
+  }
