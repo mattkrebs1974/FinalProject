@@ -30,9 +30,9 @@ import Navbar from "./pages/navbar.page";
 function App() {
   return (
     <div className="App">
-      <Navbar />
-   
       <Router>
+      <>
+      <Navbar />
         <div className="auth-wrapper">
           <div className="resultscontainer">
             <Switch>
@@ -52,6 +52,7 @@ function App() {
             </Switch>
           </div>
         </div>
+        </>
       </Router>
     </div>
   );
