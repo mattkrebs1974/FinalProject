@@ -120,13 +120,16 @@ class App extends Component {
     let dataArray = [];
     API.performancedata({ email: findemail })
       .then((res) => {
-        for (let i = 0; i < res.data.length; i++) {
-          let newObject = {};
-          newObject.x = res.data[i].question4;
-          newObject.y = res.data[i].score;
+       for (let i = 0; i < res.data.length; i++) {
+         let newObject = {};
+         newObject.x = res.data[i].question1;
 
-          dataArray.push(newObject);
-        }
+         newObject.y = res.data[i].score.toFixed(2);
+
+         if (newObject.y && newObject.x) {
+           dataArray.push(newObject);
+         }
+       }
         this.setState(
           {
             options: {
