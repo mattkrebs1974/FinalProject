@@ -1,0 +1,9 @@
+html{
+    overflow: hidden;
+}
+
+
+div.resultscontainer{
+/* margin-left: 100px; */
+text-align: center;
+}
