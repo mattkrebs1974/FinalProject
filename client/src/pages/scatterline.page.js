@@ -119,9 +119,12 @@ componentDidMount() {
         for (let i = 0; i < res.data.length; i++) {
           let newObject = {};
           newObject.x = res.data[i].question1;
-            newObject.y = res.data[i].score;
-         
-          dataArray.push(newObject)
+
+            newObject.y = (res.data[i].score).toFixed(2);;
+        
+            if (newObject.y && newObject.x) 
+            { dataArray.push(newObject);}
+        
         }
         this.setState({
           options: {

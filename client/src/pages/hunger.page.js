@@ -127,11 +127,14 @@ class App extends Component {
       .then((res) => {
         for (let i = 0; i < res.data.length; i++) {
           let newObject = {};
-          newObject.x = res.data[i].question2;
-          newObject.y = res.data[i].score;
+          newObject.x = res.data[i].question1;
 
-          dataArray.push(newObject);
-        }
+          newObject.y = res.data[i].score.toFixed(2);
+
+          if (newObject.y && newObject.x) {
+            dataArray.push(newObject);
+          }
+        }console.log(dataArray, "this is the data Array")
         this.setState(
           {
             options: {

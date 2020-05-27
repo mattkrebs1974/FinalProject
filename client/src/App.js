@@ -14,12 +14,13 @@ import Welcome from "./pages/Welcome.page"
 import Form from "../src/pages/Form.page"
 import results from "./pages/results.page";
 import Instructions from "./pages/Instructions.page";
-import Sleep from "./pages/sleep.page";
-import Hunger from "./pages/hunger.page";
-import Mood from "./pages/mood.page";
-import Exercise from "./pages/exercise.page";
+import sleep from "./pages/sleep.page";
+import hunger from "./pages/hunger.page";
+import mood from "./pages/mood.page";
+import exercise from "./pages/exercise.page";
 import timeofday from "./pages/timeofday.page";
 import Navbar from "./pages/navbar.page";
+import Scatter from "./pages/scatterline.page";
 
 
 
@@ -31,27 +32,28 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <>
-      <Navbar />
-        <div className="auth-wrapper">
-          <div className="resultscontainer">
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/sign-in" component={Login} />
-              <Route path="/sign-up" component={SignUp} />
-              <Route path="/Game" component={GameOne} />
-              <Route path="/Welcome" component={Welcome} />
-              <Route path="/Form" component={Form} />
-              <Route path="/Sleep" component={Sleep} />
-              <Route path="/Hunger" component={Hunger} />
-              <Route path="/Mood" component={Mood} />
-              <Route path="/Exercise" component={Exercise} />
-              <Route path="/results" component={results} />
-              <Route path="/Instructions" component={Instructions} />
-              <Route path="/timeofday" component={timeofday} />
-            </Switch>
+        <>
+          <Navbar />
+          <div className="auth-wrapper">
+            <div className="resultscontainer">
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route path="/sign-in" component={Login} />
+                <Route path="/sign-up" component={SignUp} />
+                <Route path="/Game" component={GameOne} />
+                <Route path="/Welcome" component={Welcome} />
+                <Route path="/Form" component={Form} />
+                <Route path="/sleep" component={sleep} />
+                <Route path="/hunger" component={hunger} />
+                <Route path="/mood" component={mood} />
+                <Route path="/exercise" component={exercise} />
+                <Route path="/results" component={results} />
+                <Route path="/Instructions" component={Instructions} />
+                <Route path="/timeofday" component={timeofday} />
+                <Route path="/scatter" component={Scatter} />
+              </Switch>
+            </div>
           </div>
-        </div>
         </>
       </Router>
     </div>

@@ -11,10 +11,7 @@ class App extends Component {
       options: {
         grid: {
           padding: {
-            
-           
             left: 10,
-         
           },
         },
         chart: {
@@ -23,7 +20,7 @@ class App extends Component {
           toolbar: {
             show: true,
 
-            offsetX: 20,
+            offsetX: 0,
             offsetY: 0,
             tools: {
               download: false,
@@ -126,9 +123,12 @@ class App extends Component {
         for (let i = 0; i < res.data.length; i++) {
           let newObject = {};
           newObject.x = res.data[i].question3;
-          newObject.y = res.data[i].score;
 
-          dataArray.push(newObject);
+          newObject.y = res.data[i].score.toFixed(2);
+
+          if (newObject.y && newObject.x) {
+            dataArray.push(newObject);
+          }
         }
         this.setState(
           {
@@ -152,9 +152,9 @@ class App extends Component {
     return (
       <div>
         <div className="title2">
-          How Active You've Been
+          How "Active" You Are
           <br></br>vs.<br></br>
-        Your "Reaction Time"<br></br>
+          Your "Reaction Time"<br></br>
         </div>
         <div className="charts">
           <Chart
