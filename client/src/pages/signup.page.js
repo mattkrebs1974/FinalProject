@@ -118,12 +118,14 @@ class signup extends Component {
         </div>
 
         <button
+          id="submit"
           type="submit"
           className="submit btn btn-primary btn-block"
           onClick={this.handleFormSubmit}
         >
-          Sign Up
+          Submit
         </button>
+        
         <p className="forgot-password text-right">
           Already registered? <a href="/sign-in">sign in</a>
         </p>
