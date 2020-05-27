@@ -2,8 +2,19 @@ html{
     overflow: hidden;
 }
 
+.welcome-message{
+    margin-bottom: 4rem;
+
+}
 
 div.resultscontainer{
 /* margin-left: 100px; */
 text-align: center;
+}
+
+.instruct{
+    float:left
+}
+.result{
+    float: right;
 }

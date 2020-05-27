@@ -47,6 +47,8 @@ export default class Home extends Component {
     };
   }
 
+
+
   // loadUsers = () => {
   //   API.getUsers()
   //     .then((res) =>
@@ -82,15 +84,15 @@ export default class Home extends Component {
 
     console.log("time: ", randoInterval());
 
-    var num = this.state.score / 3
+    var num = this.state.score/8
     var SuperNumber = num.toFixed(2)
-    console.log(SuperNumber);    
+    console.log("Your score",SuperNumber);    
 
-    if (click === 3) {
+    if (click === 8) {
       clearTimeout(timeout);  
       console.log("email:" , email)
       API.gameData({
-        score: this.state.score / 3,
+        score: SuperNumber,
         userResult: this.state.userResult,
         email: email,
         question1: question1,
@@ -121,7 +123,7 @@ export default class Home extends Component {
     console.log("y:", this.state.y);
     return (
       <div>
-        <div className="app" style={{ position: "relative", height: 500 }}>
+        <div className="app" style={{ position: "relative", height: 800 }}>
           <div
             style={{
               position: "absolute",
@@ -141,11 +143,14 @@ export default class Home extends Component {
             {" "}
             Your reaction speed:{" "}
             {
-              this.state.userResult[this.state.userResult.length - 1]
+              !!this.state.userResult[this.state.userResult.length - 1] ? 
+              this.state.userResult[this.state.userResult.length - 1].toFixed(2) :
+              null
             } seconds{" "}
           </h1>
-          <h2>your composite score: {this.state.score} seconds</h2>
-          {click === 3 ? (
+          <h2>your composite score: {this.state.score.toFixed(2)} seconds</h2>
+          {click === 8 ? (
+            <>
             <a href="http://localhost:3000/Results" alt="description of image">
               {" "}
               <img
@@ -155,9 +160,8 @@ export default class Home extends Component {
                 style={{ width: 400, height: 400 }}
               />{" "}
             </a>
-          ) : null}
-          {click === 3 ? (
-            <h1> Please select giant red button to see your results! </h1>
+            <h2> Please select giant red button to see your results! </h2>
+            </>
           ) : null}
         </div>
       </div>

@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
-
-
 import "./navbar.css";
 
 
@@ -20,7 +18,6 @@ class Navbar extends Component {
   render() {
     return (
       <div>
-
 
          {!this.state.email && <nav
           id="nav2"
