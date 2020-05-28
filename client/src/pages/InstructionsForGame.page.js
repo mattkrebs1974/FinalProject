@@ -22,7 +22,7 @@ class InstructionsForGame extends Component {
     render() { 
         return ( 
          <>
-         <p> 
+         <p className= "lol"> 
           <h1  > Game Instructions:</h1>
        
          <h2>Purpose:</h2> 
