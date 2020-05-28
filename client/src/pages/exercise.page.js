@@ -115,7 +115,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log("Chart Component DID MOUNT!");
+    console.log("Exercise Component DID MOUNT!");
     const findemail = window.localStorage.getItem("email");
     let dataArray = [];
     API.performancedata({ email: findemail })
