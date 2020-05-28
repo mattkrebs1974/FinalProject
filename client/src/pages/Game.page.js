@@ -148,7 +148,7 @@ export default class Home extends Component {
                 null
             } seconds{" "}
           </h1>
-          <h2>your composite score: {this.state.score.toFixed(2)} seconds</h2>
+
           {click === 8 ? (
             <>
               <a href="/Results" alt="description of image">
@@ -169,6 +169,8 @@ export default class Home extends Component {
   }
 }
 
+
+//           <h2>Your composite score: {this.state.score.toFixed(2)} seconds</h2>
 
 
 
