@@ -72,17 +72,17 @@ export default class Home extends Component {
       x: rando(),
       y: rando(),
       userResult: temparray,
-      startTime: Date.now(),
+      
       hidden: true,
       score: this.state.score + trackScore,
     }));
     const timeout = setTimeout(() => {
       this.setState((state) => ({
         hidden: false,
+        startTime: Date.now()
       }));
     }, randoInterval());
 
-    console.log("time: ", randoInterval());
 
     var num = this.state.score / 8
     var SuperNumber = num.toFixed(2)
