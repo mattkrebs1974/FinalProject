@@ -13,7 +13,8 @@ class results extends Component {
   render() {
     return (
 <>
-<h4> Thank you for participating in Brain SHmer. The results of your quiz have been scaled to questionare you took earlier. Please click on one of the buttons to see how  your game performance correlated with your health  </h4>
+<h4> Thank you for playing brain guage. Earlier, you answered how you felt on a variety of metrics from 1-5. <br/> 
+The following links bring you to charts which tell you how your feeling correlates with your score. This becomes much more interesting over time  so come back often! </h4>
 
 <a href="/Sleep"><button>Sleep</button></a>
 <a href="/Mood"><button> Mood</button></a>
