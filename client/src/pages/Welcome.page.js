@@ -14,7 +14,7 @@ Name = window.localStorage.getItem("firstname");
     render() {
         return (
             <>
-    
+    <div>
         <h1 className="welcome-message">
                     Welcome {this.Name}! <br/>
             </h1>
@@ -26,7 +26,9 @@ Name = window.localStorage.getItem("firstname");
                 <div className="photo" ><h2>See Results</h2> <a href="/Results"> <img src='https://i.pinimg.com/originals/c9/91/72/c99172c17b83d3c620b997858351b2a5.gif' alt="" style={{ width: 300, height: 300 }} /> </a></div>
                 </div>
                 </div>
+                </div>    
                 </>
+          
         );
     }
 }

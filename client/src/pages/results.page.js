@@ -13,8 +13,8 @@ class results extends Component {
   render() {
     return (
 <>
-
-<h4> Thank you for playing Brain Guage. Earlier, you answered how you felt on a variety of metrics from 1-5. <br/> 
+<div className="words">
+<h4>Your scores answered how you felt on a variety of metrics from 1-5. <br/> 
 The following links bring you to charts which tell you how your feeling correlates with your score. This becomes much more interesting over time  so come back often! </h4>
 
 
@@ -23,7 +23,7 @@ The following links bring you to charts which tell you how your feeling correlat
 <a href="/Hunger"><button> Hunger</button></a>
 <a href="/Exercise"><button> Exercise</button></a>
 
-
+</div>
 </>      
     );
   }

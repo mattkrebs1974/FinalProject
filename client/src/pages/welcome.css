@@ -34,3 +34,7 @@ text-align: center;
  .photo{
     border-radius: 50%;
   }
+
+  .gameDiv{
+    margin-left: 200px;
+  }
