@@ -56,7 +56,7 @@ class trial extends Component {
     console.log(this.state.selectedOption4);
     localStorage.setItem("question4", this.state.selectedOption4 )
     localStorage.getItem("question4", this.state.selectedOption4 )
-    window.location.href = "/Game"
+    window.location.href = "/InstructionsForGame"
     // console.log(this.state.selectedOption5);
     // localStorage.setItem("question5", this.state.selectedOption5 )
     // localStorage.getItem("question5", this.state.selectedOption5 )

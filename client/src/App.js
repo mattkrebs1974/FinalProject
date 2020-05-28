@@ -22,6 +22,7 @@ import timeofday from "./pages/timeofday.page";
 import Navbar from "./pages/navbar.page";
 import Scatter from "./pages/scatterline.page";
 import Navbar2 from "./pages/navbar2.page"
+import InstructionsForGame from "./pages/InstructionsForGame.page"
 
 
 
@@ -53,6 +54,7 @@ function App() {
                 <Route path="/Instructions" component={Instructions} />
                 <Route path="/timeofday" component={timeofday} />
                 <Route path="/scatter" component={Scatter} />
+                <Route path="/InstructionsForGame" component={InstructionsForGame} />
               </Switch>
             </div>
           </div>

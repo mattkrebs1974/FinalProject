@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import "./game.css";
 import API from "../util/API";
 
-
-
 var click = 0;
 function rando() {
   return Math.floor(Math.random() * 375) + 200;
@@ -30,10 +28,6 @@ var question2 = window.localStorage.getItem("question2");
 var question3 = window.localStorage.getItem("question3");
 var question4 = window.localStorage.getItem("question4");
 
-
-
-
-
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -43,54 +37,37 @@ export default class Home extends Component {
       hidden: false,
       startTime: 0,
       score: 0,
-      userResult: [],
+      userResult: []
     };
   }
-
-
-
-  // loadUsers = () => {
-  //   API.getUsers()
-  //     .then((res) =>
-  //       this.setState({
-  //         email: ""
-  //       })
-  //     )
-  //     .catch((err) => console.log(err));
-  // };
-
-
-
-
 
   move() {
     var temparray = this.state.userResult;
     temparray.push((Date.now() - this.state.startTime) / 1000);
     click++;
     console.log(click);
-    this.setState((state) => ({
+    this.setState(state => ({
       x: rando(),
       y: rando(),
       userResult: temparray,
-      
+
       hidden: true,
-      score: this.state.score + trackScore,
+      score: this.state.score + trackScore
     }));
     const timeout = setTimeout(() => {
-      this.setState((state) => ({
+      this.setState(state => ({
         hidden: false,
         startTime: Date.now()
       }));
     }, randoInterval());
 
-
-    var num = this.state.score / 8
-    var SuperNumber = num.toFixed(2)
+    var num = this.state.score / 8;
+    var SuperNumber = num.toFixed(2);
     console.log("Your score", SuperNumber);
 
     if (click === 8) {
       clearTimeout(timeout);
-      console.log("email:", email)
+      console.log("email:", email);
       API.gameData({
         score: SuperNumber,
         userResult: this.state.userResult,
@@ -98,12 +75,12 @@ export default class Home extends Component {
         question1: question1,
         question2: question2,
         question3: question3,
-        question4: question4,
+        question4: question4
       })
-        .then(function (response) {
+        .then(function(response) {
           console.log(response);
         })
-        .catch(function (error) {
+        .catch(function(error) {
           console.log(error);
         });
     }
@@ -112,11 +89,9 @@ export default class Home extends Component {
 
   componentDidMount() {
     this.setState({
-      startTime: Date.now(),
+      startTime: Date.now()
     });
   }
-
-
 
   render() {
     console.log("x:", this.state.x);
@@ -133,7 +108,7 @@ export default class Home extends Component {
               height: 100,
               width: 100,
               borderradius: 50,
-              backgroundColor: getRandomColor(),
+              backgroundColor: getRandomColor()
             }}
             onClick={() => {
               this.move();
@@ -142,11 +117,12 @@ export default class Home extends Component {
           <h1>
             {" "}
             Your reaction speed:{" "}
-            {
-              !!this.state.userResult[this.state.userResult.length - 1] ?
-                this.state.userResult[this.state.userResult.length - 1].toFixed(2) :
-                null
-            } seconds{" "}
+            {!!this.state.userResult[this.state.userResult.length - 1]
+              ? this.state.userResult[this.state.userResult.length - 1].toFixed(
+                  2
+                )
+              : null}{" "}
+            seconds{" "}
           </h1>
 
           {click === 8 ? (
@@ -169,9 +145,4 @@ export default class Home extends Component {
   }
 }
 
-
 //           <h2>Your composite score: {this.state.score.toFixed(2)} seconds</h2>
-
-
-
-
