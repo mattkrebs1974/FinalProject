@@ -92,34 +92,6 @@ class Navbar extends Component {
                 </li>
               )}
 
-              {this.state.loggedin === true && this.state.email && (
-                <li className="nav-item">
-                  <Link className="nav-link" to={"/exercise"}>
-                    Exercise
-                  </Link>
-                </li>
-              )}
-              {this.state.loggedin === true && this.state.email && (
-                <li className="nav-item">
-                  <Link className="nav-link" to={"/hunger"}>
-                    Hunger
-                  </Link>
-                </li>
-              )}
-              {this.state.loggedin === true && this.state.email && (
-                <li className="nav-item">
-                  <Link className="nav-link" to={"/mood"}>
-                    Mood
-                  </Link>
-                </li>
-              )}
-              {this.state.loggedin === true && this.state.email && (
-                <li className="nav-item">
-                  <Link className="nav-link" to={"/sleep"}>
-                    Sleep
-                  </Link>
-                </li>
-              )}
             </ul>
           </div>
         </nav>
