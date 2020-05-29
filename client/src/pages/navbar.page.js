@@ -3,16 +3,24 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 import "./navbar.css";
 
-
 class Navbar extends Component {
   state = {
     email: "",
+    loggedin: "",
   };
 
   componentDidMount() {
-    const loggedin = localStorage.getItem("email");
-    console.log("loggedin", loggedin);
-    this.setState({email:loggedin},()=>console.log(this.state))
+    const login = sessionStorage.getItem("email");
+    const areyouloggedin = sessionStorage.getItem("loggedin");
+    console.log("loggedin", login);
+    this.setState({ email: login }, () => console.log(this.state));
+    this.setState({ loggedin: areyouloggedin }, () => console.log(this.state));
+  }
+  handleFormSubmit() {
+    sessionStorage.clear();
+    console.log("Home Component is about to MOUNT!");
+    sessionStorage.setItem("loggedin", false);
+    
   }
 
   render() {
@@ -57,10 +65,58 @@ class Navbar extends Component {
                   </Link>
                 </li>
               )}
+
+              {this.state.email && (
+                <li className="dropdown">
+                  <a href="javascript:void(0)" className="dropbtn">
+                    Compare
+                  </a>
+                  <div className="dropdown-content">
+                    <a href="/exercise">Exercise</a>
+                    <a href="/hunger">Hunger</a>
+                    <a href="/mood">Mood</a>
+                    <a href="/sleep">Sleep</a>
+                  </div>
+                </li>
+              )}
+
               {this.state.email && (
                 <li className="nav-item">
-                  <Link className="nav-link" to={"/"}>
+                  <Link
+                    className="nav-link"
+                    onClick={this.handleFormSubmit}
+                    to={"/"}
+                  >
                     Log Out
+                  </Link>
+                </li>
+              )}
+
+              {this.state.loggedin === true && this.state.email && (
+                <li className="nav-item">
+                  <Link className="nav-link" to={"/exercise"}>
+                    Exercise
+                  </Link>
+                </li>
+              )}
+              {this.state.loggedin === true && this.state.email && (
+                <li className="nav-item">
+                  <Link className="nav-link" to={"/hunger"}>
+                    Hunger
+                  </Link>
+                </li>
+              )}
+              {this.state.loggedin === true && this.state.email && (
+                <li className="nav-item">
+                  <Link className="nav-link" to={"/mood"}>
+                    Mood
+                  </Link>
+                </li>
+              )}
+              {this.state.loggedin === true && this.state.email && (
+                <li className="nav-item">
+                  <Link className="nav-link" to={"/sleep"}>
+                    Sleep
                   </Link>
                 </li>
               )}

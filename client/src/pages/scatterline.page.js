@@ -109,10 +109,9 @@ class App extends Component {
     };
   }
 
-
-componentDidMount() {
+  componentDidMount() {
     console.log("Chart Component DID MOUNT!");
-    const findemail = window.localStorage.getItem("email");
+    const findemail = window.sessionStorage.getItem("email");
     let dataArray = [];
     API.performancedata({ email: findemail })
       .then((res) => {
@@ -120,21 +119,26 @@ componentDidMount() {
           let newObject = {};
           newObject.x = res.data[i].question1;
 
-            newObject.y = (res.data[i].score).toFixed(2);;
-        
-            if (newObject.y && newObject.x) 
-            { dataArray.push(newObject);}
-        
+          newObject.y = res.data[i].score.toFixed(2);
+
+          if (newObject.y && newObject.x) {
+            dataArray.push(newObject);
+          }
         }
-        this.setState({
-          options: {
-            ...this.state.options
+        this.setState(
+          {
+            options: {
+              ...this.state.options,
+            },
+            series: [
+              {
+                ...this.state.series.data,
+                data: dataArray,
+              },
+            ],
           },
-          series: [{
-            ...this.state.series.data,
-            data: dataArray
-          }]
-        }, () => console.log(this.state))
+          () => console.log(this.state)
+        );
       })
       .catch((err) => console.log(err));
   }
@@ -160,6 +164,3 @@ componentDidMount() {
 }
 
 export default App;
-
-      
-    

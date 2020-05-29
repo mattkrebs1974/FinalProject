@@ -12,9 +12,7 @@ class App extends Component {
         grid: {
           padding: {
             left: 10,
-            
           },
-    
         },
         chart: {
           height: 350,
@@ -55,7 +53,6 @@ class App extends Component {
           },
         },
         legend: {
-            
           show: true,
           labels: {
             colors: "white",
@@ -76,10 +73,8 @@ class App extends Component {
           max: 5,
           tickAmount: 5,
           title: {
-              
             text: "1.0 = Very Hungry; 5.0 = Stuffed",
             style: {
-        
               color: "#FFF",
               fontSize: "20",
               cssClass: "animal",
@@ -121,7 +116,7 @@ class App extends Component {
 
   componentDidMount() {
     console.log("Chart Component DID MOUNT!");
-    const findemail = window.localStorage.getItem("email");
+    const findemail = window.sessionStorage.getItem("email");
     let dataArray = [];
     API.performancedata({ email: findemail })
       .then((res) => {
@@ -134,7 +129,8 @@ class App extends Component {
           if (newObject.y && newObject.x) {
             dataArray.push(newObject);
           }
-        }console.log(dataArray, "this is the data Array")
+        }
+        console.log(dataArray, "this is the data Array");
         this.setState(
           {
             options: {
@@ -155,7 +151,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ marginTop: "-300px" }}>
         <div className="title2">
           Your Level of "Hunger"
           <br></br>vs.<br></br>

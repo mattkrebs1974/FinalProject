@@ -116,7 +116,7 @@ class App extends Component {
 
   componentDidMount() {
     console.log("Exercise Component DID MOUNT!");
-    const findemail = window.localStorage.getItem("email");
+    const findemail = window.sessionStorage.getItem("email");
     let dataArray = [];
     API.performancedata({ email: findemail })
       .then((res) => {
@@ -150,7 +150,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ marginTop: "-300px" }}>
         <div className="title2">
           How "Active" You Are
           <br></br>vs.<br></br>

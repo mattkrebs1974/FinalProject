@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import API from "../util/API";
 import "./login.css";
 
-
 class login extends Component {
   componentDidMount() {
-    localStorage.clear();
+    sessionStorage.clear();
     console.log("Login Component DID MOUNT!");
+     sessionStorage.setItem("loggedin", false);
   }
 
   state = {
@@ -14,6 +14,7 @@ class login extends Component {
     password: "",
     rememberMe: false,
     firstname: "",
+   
   };
 
   loadUsers = () => {
@@ -47,9 +48,9 @@ class login extends Component {
             const firstname = res.data.firstname;
             const { email, rememberMe } = this.state;
             console.log("this is first name", firstname);
-            localStorage.setItem("rememberMe", rememberMe);
-            localStorage.setItem("email", email);
-            localStorage.setItem("firstname", firstname);
+            sessionStorage.setItem("rememberMe", rememberMe);
+            sessionStorage.setItem("email", email);
+            sessionStorage.setItem("firstname", firstname);
 
             window.location.href = "/Welcome";
           }
@@ -62,7 +63,7 @@ class login extends Component {
 
   render() {
     return (
-      <form>
+      <form style={{ marginTop: "-300px" }}>
         <h3>Sign In</h3>
 
         <div className="form-group">
