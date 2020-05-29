@@ -21,7 +21,7 @@ import exercise from "./pages/exercise.page";
 import timeofday from "./pages/timeofday.page";
 import Navbar from "./pages/navbar.page";
 import Scatter from "./pages/scatterline.page";
-import Navbar2 from "./pages/navbar2.page"
+
 
 
 
@@ -35,7 +35,7 @@ function App() {
       <Router>
         <>
           <Navbar />
-          <Navbar2 />
+        
           <div className="auth-wrapper">
             <div className="resultscontainer">
               <Switch>
