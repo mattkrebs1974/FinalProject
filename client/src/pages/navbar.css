@@ -36,8 +36,6 @@ display:block;
   font-size: 8vw;
   text-align: center;
   line-height: 20px;
-  
-  
 }
 
 .enter a {
@@ -61,4 +59,55 @@ display:block;
 
 margin-top: 0 !important;
 
+}
+
+
+
+li a, .dropbtn {
+  display: inline-block;
+ color: #167bff;
+  text-align: center;
+ 
+  text-decoration: none;
+
+ 
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+ 
+}
+
+.dropdown-content a {
+  text-align: left;
+  color:#167bff;
+
+  text-decoration: none;
+  display: block;
+ 
+}
+
+.dropdown-content a:hover {background-color: #167bff; color:black}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+li.dropdown {
+
+
+  margin-top: 8.4px;
 }

@@ -18,31 +18,13 @@ module.exports = {
   },
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // const db = require("../models");
-
 
 // module.exports = {
 
-
-  
 // gameresults: function (req, res) {
 // console.log("usercontroller login", req.body)
-// const findemail = window.localStorage.getItem("email");
+// const findemail = window.sessionStorage.getItem("email");
 // db.performances
 //   .find({email:findemail})
 
@@ -55,15 +37,6 @@ module.exports = {
 //     res.status(422).json(err);
 //   });
 
-
-
-
-
 // },
-
-
-
-
-
 
 // }

@@ -22,11 +22,11 @@ function getRandomColor() {
 }
 
 //local storage variables
-var email = window.localStorage.getItem("email");
-var question1 = window.localStorage.getItem("question1");
-var question2 = window.localStorage.getItem("question2");
-var question3 = window.localStorage.getItem("question3");
-var question4 = window.localStorage.getItem("question4");
+var email = window.sessionStorage.getItem("email");
+var question1 = window.sessionStorage.getItem("question1");
+var question2 = window.sessionStorage.getItem("question2");
+var question3 = window.sessionStorage.getItem("question3");
+var question4 = window.sessionStorage.getItem("question4");
 
 export default class Home extends Component {
   constructor(props) {
@@ -37,7 +37,7 @@ export default class Home extends Component {
       hidden: false,
       startTime: 0,
       score: 0,
-      userResult: []
+      userResult: [],
     };
   }
 
@@ -46,18 +46,18 @@ export default class Home extends Component {
     temparray.push((Date.now() - this.state.startTime) / 1000);
     click++;
     console.log(click);
-    this.setState(state => ({
+    this.setState((state) => ({
       x: rando(),
       y: rando(),
       userResult: temparray,
 
       hidden: true,
-      score: this.state.score + trackScore
+      score: this.state.score + trackScore,
     }));
     const timeout = setTimeout(() => {
-      this.setState(state => ({
+      this.setState((state) => ({
         hidden: false,
-        startTime: Date.now()
+        startTime: Date.now(),
       }));
     }, randoInterval());
 
@@ -75,12 +75,12 @@ export default class Home extends Component {
         question1: question1,
         question2: question2,
         question3: question3,
-        question4: question4
+        question4: question4,
       })
-        .then(function(response) {
+        .then(function (response) {
           console.log(response);
         })
-        .catch(function(error) {
+        .catch(function (error) {
           console.log(error);
         });
     }
@@ -89,7 +89,7 @@ export default class Home extends Component {
 
   componentDidMount() {
     this.setState({
-      startTime: Date.now()
+      startTime: Date.now(),
     });
   }
 
@@ -108,7 +108,7 @@ export default class Home extends Component {
               height: 100,
               width: 100,
               borderradius: 50,
-              backgroundColor: getRandomColor()
+              backgroundColor: getRandomColor(),
             }}
             onClick={() => {
               this.move();

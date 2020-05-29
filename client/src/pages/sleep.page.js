@@ -3,8 +3,6 @@ import Chart from "react-apexcharts";
 import "./scatterline.css";
 import API from "../util/API";
 
-
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -118,20 +116,20 @@ class App extends Component {
 
   componentDidMount() {
     console.log("Chart Component DID MOUNT!");
-    const findemail = window.localStorage.getItem("email");
+    const findemail = window.sessionStorage.getItem("email");
     let dataArray = [];
     API.performancedata({ email: findemail })
       .then((res) => {
-       for (let i = 0; i < res.data.length; i++) {
-         let newObject = {};
-         newObject.x = res.data[i].question1;
+        for (let i = 0; i < res.data.length; i++) {
+          let newObject = {};
+          newObject.x = res.data[i].question1;
 
-         newObject.y = res.data[i].score.toFixed(2);
+          newObject.y = res.data[i].score.toFixed(2);
 
-         if (newObject.y && newObject.x) {
-           dataArray.push(newObject);
-         }
-       }
+          if (newObject.y && newObject.x) {
+            dataArray.push(newObject);
+          }
+        }
         this.setState(
           {
             options: {
@@ -152,8 +150,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-    
+      <div style={{ marginTop: "-300px" }}>
         <div className="title2">
           Your "Sleepiness"
           <br></br>vs.<br></br>

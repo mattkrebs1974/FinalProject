@@ -9,8 +9,7 @@ class Navbar extends Component {
   };
 
   componentDidMount() {
-    
-    const loggedin = localStorage.getItem("email");
+    const loggedin = sessionStorage.getItem("email");
     console.log("loggedin", loggedin);
     this.setState({ email: loggedin }, () => console.log(this.state));
   }
@@ -36,9 +35,6 @@ class Navbar extends Component {
             </button>
             <div className="navbar-collapse collapse" id="nav3">
               <ul className="nav navbar-nav.navbar-right ml-auto">
-               
-
-               
                 <li className="nav-item">
                   <Link className="nav-link" to={"/sign-up"}>
                     Sign up

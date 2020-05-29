@@ -2,16 +2,13 @@ import React, { Component } from "react";
 import API from "../util/API";
 import "./login.css";
 
-
 // import { Link } from "react-router-dom";
 
-
 class signup extends Component {
-  
-  
   componentDidMount() {
-     localStorage.clear();
+    sessionStorage.clear();
     console.log("Signup Component DID MOUNT!");
+     sessionStorage.setItem("loggedin", false);
   }
 
   state = {
@@ -66,7 +63,7 @@ class signup extends Component {
 
   render() {
     return (
-      <form>
+      <form style={{ marginTop: "-200px" }}>
         <h3>Sign Up</h3>
 
         <div className="form-group">
@@ -125,7 +122,7 @@ class signup extends Component {
         >
           Submit
         </button>
-        
+
         <p className="forgot-password text-right">
           Already registered? <a href="/sign-in">sign in</a>
         </p>

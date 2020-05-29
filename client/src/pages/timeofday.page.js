@@ -61,18 +61,17 @@ class App extends Component {
           fontSize: "20",
         },
         xaxis: {
-
-            x: new Date('14 Nov 2012').getTime(),
-            borderColor: '#999',
-            yAxisIndex: 0,
-            label: {
-              show: true,
-              text: 'Rally',
-              style: {
-                color: "#fff",
-                background: '#775DD0'
-              }
+          x: new Date("14 Nov 2012").getTime(),
+          borderColor: "#999",
+          yAxisIndex: 0,
+          label: {
+            show: true,
+            text: "Rally",
+            style: {
+              color: "#fff",
+              background: "#775DD0",
             },
+          },
           labels: {
             style: {
               fontSize: "15",
@@ -128,7 +127,7 @@ class App extends Component {
 
   componentDidMount() {
     console.log("Chart Component DID MOUNT!");
-    const findemail = window.localStorage.getItem("email");
+    const findemail = window.sessionStorage.getItem("email");
     let dataArray = [];
     API.performancedata({ email: findemail })
       .then((res) => {
@@ -138,7 +137,7 @@ class App extends Component {
           newObject.y = res.data[i].score;
 
           dataArray.push(newObject);
-          console.log("this is the time data", dataArray)
+          console.log("this is the time data", dataArray);
         }
         this.setState(
           {
