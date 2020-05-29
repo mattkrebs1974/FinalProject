@@ -1,6 +1,10 @@
-html{
-    overflow: hidden;
+.auth-wrapper {
+
+margin-top:100px; 
+
 }
+
+
 
 .welcome-message{
     margin-bottom: 4rem;
@@ -35,6 +39,52 @@ text-align: center;
     border-radius: 50%;
   }
 
+
+  .bob {
+
+    font-size: 20px;
+margin-left: auto !important;
+margin-right: auto !important;
+display: block;
+
+
+  }
+#whatever {
+
+  margin-right: 0px !important;
+   width: 40vw;
+}
+#whatever2 {
+
+  margin-right: 0px !important;
+  width: 40vw;
+}
+
+#PlayGame {
+
+  color: red;
+  font-size: 30px;
+  margin-left:auto;
+  margin-right:auto;
+  
+
+}
+#PlayGame2 {
+
+  color: red;
+  font-size: 30px;
+   margin-left:auto;
+  margin-right:auto;
+ 
+
+}
+#separator {
+
+  line-height: 30px;
+}
+
+
   .gameDiv{
     margin-left: 200px;
   }
+

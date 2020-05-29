@@ -18,8 +18,7 @@ class Navbar extends Component {
   render() {
     return (
       <div>
-
-         {!this.state.email && <nav
+        <nav
           id="nav2"
           className="navbar-dark navbar-success bg-transparent navbar-expand navigation-bar is-visible"
           data-nav-status="toggle"
@@ -36,26 +35,38 @@ class Navbar extends Component {
           </button>
           <div className="navbar-collapse collapse" id="nav3">
             <ul className="nav navbar-nav.navbar-right ml-auto">
-             <li className="nav-item">
-                <Link className="nav-link" to={"/"}>
-                  Home
-                </Link>
-              </li>
-              
-              <li className="nav-item">
-                <Link className="nav-link" to={"/sign-in"}>
-                  Login
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to={"/sign-up"}>
-                  Sign up
-                </Link>
-              </li>
+              {!this.state.email && (
+                <li className="nav-item">
+                  <Link className="nav-link" to={"/"}>
+                    Home
+                  </Link>
+                </li>
+              )}
+
+              {!this.state.email && (
+                <li className="nav-item">
+                  <Link className="nav-link" to={"/sign-in"}>
+                    Login
+                  </Link>
+                </li>
+              )}
+              {!this.state.email && (
+                <li className="nav-item">
+                  <Link className="nav-link" to={"/sign-up"}>
+                    Sign up
+                  </Link>
+                </li>
+              )}
+              {this.state.email && (
+                <li className="nav-item">
+                  <Link className="nav-link" to={"/"}>
+                    Log Out
+                  </Link>
+                </li>
+              )}
             </ul>
           </div>
-            </nav>}
-
+        </nav>
       </div>
     );
   }
