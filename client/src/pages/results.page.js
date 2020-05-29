@@ -13,9 +13,9 @@ class results extends Component {
   render() {
     return (
 <>
-
-<h4> Thank you for playing Brain Guage. Earlier, you answered how you felt on a variety of metrics from 1-5. <br/> 
-The following links bring you to charts which tell you how your feeling correlates with your score. This becomes much more interesting over time  so come back often! </h4>
+<div className="words">
+<h4>
+The following buttons bring you to charts which tell you how your feeling correlates with your response time. This becomes much more interesting over time- so come back often! </h4>
 
 
 <a href="/Sleep"><button>Sleep</button></a>
@@ -23,7 +23,7 @@ The following links bring you to charts which tell you how your feeling correlat
 <a href="/Hunger"><button> Hunger</button></a>
 <a href="/Exercise"><button> Exercise</button></a>
 
-
+</div>
 </>      
     );
   }
@@ -31,30 +31,3 @@ The following links bring you to charts which tell you how your feeling correlat
 export default results;
 
 
-
-//   
- // state = {
-  //   email: "",
-  // };
-  // loadUsers = (event) => {
-  //   event.preventDefault();
-  //   API.performancedata({ something: "value" })
-  //     .then((res) =>
-  //       this.setState({
-  //         email: "",
-  //       })
-  //     )
-  //     .catch((err) => console.log(err));
-  // };
-
-
-//   <form>
-//   <button
-//     id="submit"
-//     type="submit"
-//     className="submit btn btn-primary btn-block"
-//     onClick={this.loadUsers}
-//   >
-//     Show Data
-//   </button>
-// </form>

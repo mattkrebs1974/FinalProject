@@ -13,6 +13,7 @@ Name = window.localStorage.getItem("firstname");
 
     render() {
         return (
+
           // <>
           <div>
             <div className="title">
@@ -57,6 +58,7 @@ Name = window.localStorage.getItem("firstname");
             
           
           </div>
+
         );
     }
 }

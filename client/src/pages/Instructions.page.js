@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./instructions.css"
+import { white, red } from 'color-name';
 class Instructions extends Component {
         constructor(props) {
           super(props);
@@ -22,20 +23,19 @@ class Instructions extends Component {
     render() { 
         return ( 
          <>
-          <h1  style={{ 
-            visibility:this.state.hidden ? "hidden" : "visible"
+          <h1  style={{ color: red
        }}
         > Instructions:</h1>
          <div  
          style={{ 
-             visibility:this.state.hidden ? "hidden" : "visible"
+           color: white
         }} > 
-         <p> This text is going to dissapear in ten seconds
+         <p> Before you begin the game, you will need to take a quick questionnaire. To proceed click on the gif below:
         </p>
        </div>
          
        
-       <a href="/Form"> <img src='https://www.kindpng.com/picc/m/46-468918_brain-clipart-draw-aesthetic-brain-drawing-hd-png.png' alt="" 
+       <a href="/Form"> <img src='https://media3.giphy.com/media/LOznMvZUKneOhiIscg/giphy.gif' alt="" 
          style={{ 
              width: 200,
             height: 200 
