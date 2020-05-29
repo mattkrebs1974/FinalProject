@@ -30,7 +30,7 @@ class Instructions extends Component {
          style={{ 
            color: white
         }} > 
-         <p> Before you begin the game, you will need to take a quick questionnaire. To proceed to the questionnaire click on the gif below 
+         <p> Before you begin the game, you will need to take a quick questionnaire. To proceed click on the gif below:
         </p>
        </div>
          
