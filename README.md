@@ -9,18 +9,13 @@ This React App takes in users performance on simple mental exercises and gives f
 
 ## Deployment 
 
-This application can be found [here.]()
+This application can be found [here.](https://braingaugefinalproject.herokuapp.com/)
 
 ## User Experience
 
-After the page loads a header, scoreboard, and image grid are displayed.
+After the page loads a you will be able to either create a user (if it is your first time visiting) or login. 
+Once you have registered and logged in you will take a survey answering 4 questions meant to gauge your "Mood" "Sleep" "Exercise" and "Hunger". 
 
-The image grid is shuffled on every page load and image click regardless of choice.
-Clicking one of the images starts the game and adds +1 to your score.
+After taking the survey you will play the Game which tests your reaction time. 
 
-This counter helps the user keep track of images left to click
-If all images are clicked successfully. A message telling the user so pops up and the game starts over.
-
-If an incorrect choice is made a shaking animation is run on the image grid and a game over message is displayed asking the user to try again.
-
-The highest score for the user's session is also displayed on the scoreboard.
+After playing the game you will be able to see how your Reaction Time as compared with any of your survey answers compare to past results for those survey questions. 
