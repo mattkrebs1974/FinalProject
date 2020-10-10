@@ -53,7 +53,9 @@ class login extends Component {
             sessionStorage.setItem("firstname", firstname);
 
             window.location.href = "/Welcome";
+          
           }
+           
         })
         .catch((err) => console.log(err));
     } else {
