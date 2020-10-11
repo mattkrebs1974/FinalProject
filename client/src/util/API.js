@@ -14,12 +14,8 @@ export default {
     return axios.get("/api/users");
   },
 
-  login: function (err, user) {
-    if (err) {
-      console.log("HIIIII", err);
-    } else {
-      return axios.post("/api/users/login", user);
-    }
+  login: function (user) {
+    return axios.post("/api/users/login", user);
   },
 
   performancedata: function (data) {

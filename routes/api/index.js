@@ -2,7 +2,7 @@ const path = require("path");
 const router = require("express").Router();
 const userRoutes = require("./user");
 const resultsRoutes = require("./results");
-const Score = require("../../models/score");
+// const Score = require("../models/score");
 const gameResults = require("./game");
 
 router.use("/users",userRoutes);

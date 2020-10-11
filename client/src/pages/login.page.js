@@ -42,16 +42,18 @@ class login extends Component {
         email: this.state.email,
         password: this.state.password,
       })
-        .then((res) => {
+        .then((res) => 
+        
+        
+        {
           console.log(res, "adsfaafasfa", res.data.firstname);
-          if (res) {
+          if (res.data.firstname) {
             const firstname = res.data.firstname;
             const { email, rememberMe } = this.state;
             console.log("this is first name", firstname);
             sessionStorage.setItem("rememberMe", rememberMe);
             sessionStorage.setItem("email", email);
             sessionStorage.setItem("firstname", firstname);
-
             window.location.href = "/Welcome";
           
           }
