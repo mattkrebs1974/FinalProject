@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "This App takes in users performance on simple mental exercises and gives feedback to the user on how that performance relates to the users self-ratings of how \"hungry/full\", \"tired/refreshed\", \"sad/happy,\" \"lazy/motivated\"  they feel.",
   "main": "server.js",
-   "proxy": "http://0.0.0.0:3002", 
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",

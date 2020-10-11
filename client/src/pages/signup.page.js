@@ -8,7 +8,7 @@ class signup extends Component {
   componentDidMount() {
     sessionStorage.clear();
     console.log("Signup Component DID MOUNT!");
-     sessionStorage.setItem("loggedin", false);
+    sessionStorage.setItem("loggedin", false);
   }
 
   state = {
@@ -53,8 +53,10 @@ class signup extends Component {
         email: this.state.email,
         password: this.state.password,
       })
-        .then((res) => this.loadUsers(), (window.location.href = "/sign-in"))
-
+        .then((data) => {
+          window.location.href = "/sign-in";
+          console.log("RESPONSE", data);
+        })
         .catch((err) => console.log(err));
     } else {
       alert("All fields must be completed!");
