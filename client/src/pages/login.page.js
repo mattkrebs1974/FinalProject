@@ -67,7 +67,7 @@ class login extends Component {
 
   render() {
     return (
-      <form style={{ marginTop: "-300px" }}>
+      <form>
         <h3>Sign In</h3>
 
         <div className="form-group">

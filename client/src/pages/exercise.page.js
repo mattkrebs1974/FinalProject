@@ -16,6 +16,7 @@ class App extends Component {
         },
         chart: {
           height: 350,
+    
           type: "line",
           toolbar: {
             show: true,
@@ -150,7 +151,7 @@ class App extends Component {
 
   render() {
     return (
-      <div style={{ marginTop: "-300px" }}>
+      <div>
         <div className="title2">
           How "Active" You Are
           <br></br>vs.<br></br>
@@ -160,7 +161,8 @@ class App extends Component {
           <Chart
             options={this.state.options}
             series={this.state.series}
-            width={"90%"}
+            width={"100%"}
+            
           />
         </div>
       </div>

@@ -65,7 +65,7 @@ class signup extends Component {
 
   render() {
     return (
-      <form style={{ marginTop: "-200px" }}>
+      <form>
         <h3>Sign Up</h3>
 
         <div className="form-group">

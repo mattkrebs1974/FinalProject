@@ -4,7 +4,7 @@ import API from "../util/API";
 
 var click = 0;
 function rando() {
-  return Math.floor(Math.random() * 375) + 200;
+  return Math.floor(Math.random() * 60) + 20;
 }
 
 function randoInterval() {
@@ -47,8 +47,8 @@ export default class Home extends Component {
     click++;
     console.log(click);
     this.setState((state) => ({
-      x: rando(),
-      y: rando(),
+      x: rando()+"%",
+      y: rando()+"%",
       userResult: temparray,
 
       hidden: true,
@@ -98,11 +98,12 @@ export default class Home extends Component {
     console.log("y:", this.state.y);
     return (
       <div>
-        <div className="app" style={{ position: "relative", height: 800 }}>
+        <div className="app" style={{ position: "relative", height: "80%"}}>
           <div
             style={{
               position: "absolute",
               visibility: this.state.hidden ? "hidden" : "visible",
+              marginTop: "200px",
               top: this.state.y,
               right: this.state.x,
               height: 100,

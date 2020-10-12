@@ -63,7 +63,7 @@ class trial extends Component {
   }
   render() {
     return (
-      <div style={{ marginTop: "-250px" }}>
+      <div>
         <form>
           <div>
             <form>
