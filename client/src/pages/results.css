@@ -6,13 +6,15 @@
 
 .words{
     background: black;
-    margin-left: 20rem;
-    margin-bottom: 10rem;
+   margin-left: auto;
+   margin-right:auto;
     color: white;
     padding: 15px;
-    width: 50%;
-    height: 600px;
-    overflow: scroll;
-    border: 1px solid #ccc;
+    width: 80%;
+    max-width: 400px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    
+   
     
 }

@@ -10,7 +10,7 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div style={{ marginTop: "-300px" }}>
+      <div>
         <div className="title">Brain Gauge</div>
         <br></br>
         <br></br>

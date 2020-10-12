@@ -42,6 +42,7 @@ function App() {
           <Navbar />
         
           <div className="auth-wrapper">
+          
             <div className="resultscontainer">
               <Switch>
                 <Route exact path="/" component={Home} />

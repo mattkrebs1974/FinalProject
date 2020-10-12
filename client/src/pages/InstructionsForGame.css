@@ -3,12 +3,9 @@
 }
 .lol{
     background: black;
-    margin-left: 20rem;
-    margin-bottom: 10rem;
+    margin-left: auto;
+    margin-right: auto;
     color: white;
-    padding: 15px;
-    width: 50%;
-    height: 600px;
-    overflow: scroll;
-    border: 1px solid #ccc;
+    padding-top: 15px;
+    width: 80%;    
 }

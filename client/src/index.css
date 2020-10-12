@@ -28,12 +28,8 @@ body, html, .App, #root, .auth-wrapper {
 }
 
 .auth-wrapper {
-
-  margin-top: 40px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  text-align: left;
 }
 
 .auth-inner {

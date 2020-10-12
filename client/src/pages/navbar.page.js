@@ -20,6 +20,7 @@ class Navbar extends Component {
     sessionStorage.clear();
     console.log("Home Component is about to MOUNT!");
     sessionStorage.setItem("loggedin", false);
+    window.location.href = "/";
     
   }
 

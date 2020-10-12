@@ -1,65 +1,54 @@
-
 .charts {
-margin: 70px auto;
-margin-top: 10%;
-overflow: hidden;
-width: 100%;
-text-align: center;
-min-width: 450px;
+  margin: 70px auto;
+  margin-top: 10%;
+  overflow: hidden;
+  width:60%;
+  text-align: center;
+  min-width: 350px;
+ 
 }
 
 div.auth-inner {
+  padding: 10%;
+  margin-top: 175px;
 
-padding: 10%;
-padding-top:0px;
-    margin-top: 175px;
-
-    max-width: 900px;
+  max-width: 900px;
 }
 
-
 .animal {
-
-margin-top:50px;
-
+  margin-top: 50px;
 }
 .title2 {
 
-margin-top: 5%;
-text-align: center;
-font-size: 30px;
-text-shadow: .5px .5px #FFF;
-color: #167bff;
+  text-align: center;
+  font-size: 30px;
+  text-shadow: 0.5px 0.5px #fff;
+  color: #167bff;
 }
 .title2:hover {
-
-text-shadow: 1.2px 1.2px #FFF;
-
+  text-shadow: 1.2px 1.2px #fff;
 }
-
 
 @media only screen and (min-width: 800px) {
   div.title2 {
-  
-    margin-top: 15%;
-text-align: center;
-font-size: 30px;
-text-shadow: .5px .5px #FFF;
-color: #167bff;
-
+   
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 0.5px 0.5px #fff;
+    color: #167bff;
   }
 }
 
 div.charts {
-margin-top: 0px;
-margin-left: auto;
-margin-right:auto;
-max-width: 900px;
-padding-left: 5%
+
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right:auto;
+  max-width: 900px;
+ justify-content: center;
 }
 div.resultscontainer {
-
-
-    margin-top:0px;
-
+  margin-top: 0px;
+ 
+ 
 }

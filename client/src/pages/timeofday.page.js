@@ -169,7 +169,7 @@ class App extends Component {
           <Chart
             options={this.state.options}
             series={this.state.series}
-            width={"90%"}
+            width={"80%"}
           />
         </div>
       </div>
