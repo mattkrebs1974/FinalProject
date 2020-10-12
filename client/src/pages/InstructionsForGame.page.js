@@ -35,17 +35,11 @@ class InstructionsForGame extends Component {
           must click this box, and all the subsequent boxes until the game is
           completed. You will know the game is done when a large red button
           appears on the screen.
-          <a href="/Game">
-            {" "}
-            <img
-              src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/cc9e1141599113.57ac73aa7fe04.gif"
-              alt=""
-              style={{
-                height: 150,
-              }}
-            />
-          </a>
         </p>
+        <a href="/Game">
+          {" "}
+          <button type="button" class ="gobutton">Start Game!</button>
+        </a>
       </div>
     );
   }

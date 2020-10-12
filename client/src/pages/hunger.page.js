@@ -16,6 +16,7 @@ class App extends Component {
         },
         chart: {
           height: 350,
+
           type: "line",
           toolbar: {
             show: true,
@@ -54,6 +55,10 @@ class App extends Component {
         },
         legend: {
           show: true,
+          itemMargin: {
+            horizontal: 200,
+            vertical: 200,
+          },
           labels: {
             colors: "white",
             useSeriesColors: true,
@@ -61,22 +66,32 @@ class App extends Component {
           fontSize: "20",
         },
         xaxis: {
+          axisTicks: {
+            show: true,
+            height: 5,
+            width: "100%",
+            offsetX: 0,
+            offsetY: 0,
+          },
           labels: {
+            offsetY: -3,
             style: {
               fontSize: "15",
               colors: "white",
+              padding: "50",
             },
           },
-
           type: "numeric",
           min: 0,
           max: 5,
           tickAmount: 5,
           title: {
             text: "1.0 = Very Hungry; 5.0 = Stuffed",
+            margin: 100,
+            floating: false,
             style: {
               color: "#FFF",
-              fontSize: "20",
+              fontSize: window.innerWidth > 540 ? 20 : 15,
               cssClass: "animal",
             },
           },
@@ -93,14 +108,13 @@ class App extends Component {
             style: {
               color: "white",
               fontSize: "20",
-              cssClass: "animal",
+              padding: 109,
             },
           },
 
           type: "numeric",
           min: 0,
-
-          tickAmount: 5,
+          tickAmount: window.innerWidth > 640 ? 5 : 4,
         },
       },
       series: [

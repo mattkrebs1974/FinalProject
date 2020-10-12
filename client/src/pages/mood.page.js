@@ -61,10 +61,19 @@ class App extends Component {
           fontSize: "20",
         },
         xaxis: {
+          axisTicks: {
+            show: true,
+            height: 5,
+            width: "100%",
+            offsetX: 0,
+            offsetY: 0,
+          },
           labels: {
+            offsetY: -3,
             style: {
               fontSize: "15",
               colors: "white",
+              padding: "50",
             },
           },
 
@@ -74,9 +83,11 @@ class App extends Component {
           tickAmount: 5,
           title: {
             text: "1.0 = Very Sad; 5.0 = Elated",
+            margin: 100,
+            floating: false,
             style: {
               color: "#FFF",
-              fontSize: "20",
+              fontSize: window.innerWidth > 540 ? 20 : 15,
               cssClass: "animal",
             },
           },
@@ -100,7 +111,7 @@ class App extends Component {
           type: "numeric",
           min: 0,
 
-          tickAmount: 5,
+          tickAmount: window.innerWidth > 640 ? 5 : 4,
         },
       },
       series: [
